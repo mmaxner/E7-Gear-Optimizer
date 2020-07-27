@@ -17,6 +17,8 @@ namespace E7_Gear_Optimizer
     public class Hero
     {
         public string ID { get; }
+        public const int DEFAULT_PRIORITY = 5;
+        public int Priority { get; set; }
         public string Name { get; }
         public Image Portrait { get; }
         public Image PortraitSmall { get; }
@@ -41,9 +43,10 @@ namespace E7_Gear_Optimizer
         public Skill[] Skills { get; }
         public Skill SkillWithSoulburn { get; }
 
-        public Hero(string ID, string name, List<Item> gear, Item artifact, int lvl, int awakening, int[] skillEnhance = null)
+        public Hero(string ID, string name, List<Item> gear, Item artifact, int lvl, int awakening, int[] skillEnhance = null, int priority = DEFAULT_PRIORITY)
         {
             this.ID = ID;
+            this.Priority = priority;
             Name = name;
             this.gear = new Dictionary<ItemType, Item>();
             foreach (Item item in gear)

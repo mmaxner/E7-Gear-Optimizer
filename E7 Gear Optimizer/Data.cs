@@ -244,9 +244,10 @@ namespace E7_Gear_Optimizer
                             skillEnhance.Add(jSkill.Value<int>("Enhance"));
                         }
                     }
+                    int priority = (int)(hero["Priority"] != null ? hero["Priority"] : Hero.DEFAULT_PRIORITY);
                     try
                     {
-                        Heroes.Add(new Hero(id, name, gearList, artifact, lvl, awakening, skillEnhance.Count == 3 ? skillEnhance.ToArray() : null));
+                        Heroes.Add(new Hero(id, name, gearList, artifact, lvl, awakening, skillEnhance.Count == 3 ? skillEnhance.ToArray() : null, priority));
                     }
                     catch (Exception ex)
                     {

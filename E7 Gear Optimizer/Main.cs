@@ -408,7 +408,7 @@ namespace E7_Gear_Optimizer
             else if (((TabControl)(sender)).SelectedIndex == 3)
             {
                 cb_OptimizeHero.Items.Clear();
-                foreach (Hero hero in data.Heroes)
+                foreach (Hero hero in data.Heroes.OrderBy(h => h.Priority).ToList())
                 {
                     cb_OptimizeHero.Items.Add(hero.Name + " " + hero.ID);
                 }
@@ -569,6 +569,7 @@ namespace E7_Gear_Optimizer
                 values[18] = (int)stats[Stats.EHPpS];
                 values[19] = (int)stats[Stats.DMG];
                 values[20] = (int)stats[Stats.DMGpS];
+                values[21] = (int)hero.Priority;
                 dgv_Heroes.Rows.Add(values);
             }
 
@@ -1064,6 +1065,7 @@ namespace E7_Gear_Optimizer
                     newHero.Skills[0].Enhance = (int)nud_S1.Value;
                     newHero.Skills[1].Enhance = (int)nud_S2.Value;
                     newHero.Skills[2].Enhance = (int)nud_S3.Value;
+                    newHero.Priority = (int)nud_Priority.Value;
                 }
                 else
                 {
@@ -1082,6 +1084,7 @@ namespace E7_Gear_Optimizer
                     hero.Skills[0].Enhance = (int)nud_S1.Value;
                     hero.Skills[1].Enhance = (int)nud_S2.Value;
                     hero.Skills[2].Enhance = (int)nud_S3.Value;
+                    hero.Priority = (int)nud_Priority.Value;
                 }
                 updateHeroList();
             }
@@ -1101,6 +1104,7 @@ namespace E7_Gear_Optimizer
             nud_S1.Value = hero.Skills[0].Enhance;
             nud_S2.Value = hero.Skills[1].Enhance;
             nud_S3.Value = hero.Skills[2].Enhance;
+            nud_Priority.Value = hero.Priority;
             tt_Skills.SetToolTip(nud_S1, $"+{hero.Skills[0].DamageIncrease}% damage dealt");
             tt_Skills.SetToolTip(nud_S2, $"+{hero.Skills[1].DamageIncrease}% damage dealt");
             tt_Skills.SetToolTip(nud_S3, $"+{hero.Skills[2].DamageIncrease}% damage dealt");
@@ -1123,6 +1127,10 @@ namespace E7_Gear_Optimizer
                 Item artifact = new Item("", ItemType.Artifact, Set.Attack, Grade.Epic, 0, 0, new Stat(), new Stat[] { new Stat(Stats.ATK, (float)nud_ArtifactAttack.Value), new Stat(Stats.HP, (float)nud_ArtifactHealth.Value) }, null, false);
                 Hero newHero = new Hero(data.incrementHeroID(), cb_Hero.Text, new List<Item>(), artifact, int.Parse(cb_HeroLvl.Text), int.Parse(cb_HeroAwakening.Text));
                 data.Heroes.Add(newHero);
+                newHero.Skills[0].Enhance = (int)nud_S1.Value;
+                newHero.Skills[1].Enhance = (int)nud_S2.Value;
+                newHero.Skills[2].Enhance = (int)nud_S3.Value;
+                newHero.Priority = (int)nud_Priority.Value;
                 updateHeroList();
                 dgv_Heroes.CurrentCell = dgv_Heroes.Rows[dgv_Heroes.Rows.Count - 1].Cells[0];
             }
@@ -2160,7 +2168,8 @@ namespace E7_Gear_Optimizer
                                        new JProperty("Awakening", h.Awakening),
                                        new JProperty("Skills", new JArray(from skill in h.Skills
                                                                           select new JObject(
-                                                                              new JProperty("Enhance", skill.Enhance))))))),
+                                                                              new JProperty("Enhance", skill.Enhance)))),
+                                       new JProperty("Priority", h.Priority)))),
                     new JProperty("items",
                         new JArray(from i in data.Items
                                    select new JObject(
