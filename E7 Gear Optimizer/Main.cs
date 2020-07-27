@@ -2845,16 +2845,5 @@ namespace E7_Gear_Optimizer
             }
             B_EquipOptimize_Click(null, null);
         }
-
-        private void b_EquipLockOptimize_Click(object sender, EventArgs e)
-        {
-            Hero hero = data.Heroes.Find(x => x.ID == cb_OptimizeHero.Text.Split(' ').Last());
-            List<Item> gear = hero.getGear();
-            foreach (Item item in gear)
-            {
-                item.Locked = true;
-            }
-            B_EquipOptimize_Click(null, null);
-        }
     }
 }
