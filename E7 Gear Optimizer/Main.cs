@@ -22,6 +22,8 @@ namespace E7_Gear_Optimizer
     public partial class Main : Form
     {
         private Data data = new Data();
+        private List<String> allHeroes = new List<string>();
+        private List<String> unEquippedHeroes = new List<string>();
         private bool Locked = false;
         List<(Item[], SStats)> combinations = new List<(Item[], SStats)>();
         List<int> filteredCombinations = new List<int>();
@@ -35,7 +37,7 @@ namespace E7_Gear_Optimizer
         static bool limitResults = Properties.Settings.Default.LimitResults;
         static int limitResultsNum = Properties.Settings.Default.LimitResultsNum;
         static long resultsCurrent;//long is used to allow use Interlocked.Read() as that method is more clear than .CompareExchange()
-        private bool useCache
+        public bool useCache
         {
             get => Properties.Settings.Default.UseCache;
             set
@@ -126,7 +128,10 @@ namespace E7_Gear_Optimizer
                 }
                 catch (WebException ex)
                 {
-                    MessageBox.Show("Could not connect to epicsevendb.com. Please check your internet connection.\nThe Optimizer will try to use a cached version of epicsevendb.com if it is available.");
+                    if (!useCache)
+                    {
+                        MessageBox.Show("Could not connect to epicsevendb.com. Please check your internet connection.\nThe Optimizer will try to use a cached version of epicsevendb.com if it is available.");
+                    }
                     if (File.Exists(cacheFileName))
                     {
                         json = File.ReadAllText(cacheFileName);
@@ -407,11 +412,12 @@ namespace E7_Gear_Optimizer
             }
             else if (((TabControl)(sender)).SelectedIndex == 3)
             {
-                cb_OptimizeHero.Items.Clear();
+                allHeroes.Clear();
                 foreach (Hero hero in data.Heroes.OrderBy(h => h.Priority).ToList())
                 {
-                    cb_OptimizeHero.Items.Add(hero.Name + " " + hero.ID);
+                    allHeroes.Add(hero.Name + " " + hero.ID);
                 }
+                calculateUnEquippedHeroes();
                 l_Results.Text = numberOfResults().ToString("#,0");
                 updateCurrentGear();
             }
@@ -421,7 +427,7 @@ namespace E7_Gear_Optimizer
                 cb2_SpeedTuner.Items.Clear();
                 cb3_SpeedTuner.Items.Clear();
                 cb4_SpeedTuner.Items.Clear();
-                foreach (Hero hero in data.Heroes)
+                foreach (Hero hero in data.Heroes.OrderBy(h => h.Priority).ToList())
                 {
                     cb1_SpeedTuner.Items.Add(hero.Name + " " + hero.ID);
                     cb2_SpeedTuner.Items.Add(hero.Name + " " + hero.ID);
@@ -1316,6 +1322,7 @@ namespace E7_Gear_Optimizer
             is_BootsOptimize.Hero = hero;
             updateCurrentGear();
             l_Results.Text = numberOfResults().ToString("#,0");
+            pb_OptimizeHeroPortrait.Image = hero.Portrait;
         }
 
         //Estimate the number of results with the currenty selected criteria. This method only takes account of focus options for right side gear 
@@ -2088,6 +2095,7 @@ namespace E7_Gear_Optimizer
             }
             hero.equip(items);
             updateCurrentGear();
+            calculateUnEquippedHeroes();
             Dgv_OptimizeResults_RowEnter(null, new DataGridViewCellEventArgs(0, dgv_OptimizeResults.SelectedCells[0].RowIndex));
         }
 
@@ -2844,6 +2852,46 @@ namespace E7_Gear_Optimizer
                 item.Locked = false;
             }
             B_EquipOptimize_Click(null, null);
+        }
+
+        private void b_EquipLockOptimize_Click(object sender, EventArgs e)
+        {
+            Hero hero = data.Heroes.Find(x => x.ID == cb_OptimizeHero.Text.Split(' ').Last());
+            B_EquipOptimize_Click(null, null);
+            List<Item> gear = hero.getGear();
+            foreach (Item item in gear)
+            {
+                item.Locked = true;
+            }
+        }
+
+        private void chb_hideEquippedHeroes_CheckedChanged(object sender, EventArgs e)
+        {
+            cb_OptimizeHero.DataSource = chb_hideEquippedHeroes.Checked ? unEquippedHeroes : allHeroes;
+        }
+
+        private void calculateUnEquippedHeroes()
+        {
+            unEquippedHeroes.Clear();
+            foreach (Hero hero in data.Heroes.OrderBy(h => h.Priority).ToList())
+            {
+                if (hero.getGear().Count < 6)
+                {
+                    unEquippedHeroes.Add(hero.Name + " " + hero.ID);
+                }
+                else
+                {
+                    foreach (Item item in hero.getGear())
+                    {
+                        if (!item.Locked)
+                        {
+                            unEquippedHeroes.Add(hero.Name + " " + hero.ID);
+                        }
+                    }
+                }
+            }
+            cb_OptimizeHero.DataSource = null;
+            cb_OptimizeHero.DataSource = chb_hideEquippedHeroes.Checked ? unEquippedHeroes : allHeroes;
         }
     }
 }

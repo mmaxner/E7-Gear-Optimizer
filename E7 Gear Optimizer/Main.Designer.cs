@@ -207,6 +207,29 @@
             this.tabPage16 = new System.Windows.Forms.TabPage();
             this.Elements = new System.Windows.Forms.ImageList(this.components);
             this.dgv_Heroes = new System.Windows.Forms.DataGridView();
+            this.c_Portrait = new System.Windows.Forms.DataGridViewImageColumn();
+            this.c_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_Element = new System.Windows.Forms.DataGridViewImageColumn();
+            this.c_Class = new System.Windows.Forms.DataGridViewImageColumn();
+            this.c_Lvl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_Awakening = new System.Windows.Forms.DataGridViewImageColumn();
+            this.c_Sets = new System.Windows.Forms.DataGridViewImageColumn();
+            this.c_ATKHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_SPDHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_CritHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_CritDmgHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_HPHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_HPpSHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_DEFHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_EFFHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_RESHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_DACHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_EHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_EHPpSHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_DMG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_DMGpS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_HeroPriority = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_HeroID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.b_EditBoots = new System.Windows.Forms.Button();
             this.b_EditRing = new System.Windows.Forms.Button();
             this.b_EditNecklace = new System.Windows.Forms.Button();
@@ -217,13 +240,10 @@
             this.b_RemoveHero = new System.Windows.Forms.Button();
             this.b_EditHero = new System.Windows.Forms.Button();
             this.b_AddHero = new System.Windows.Forms.Button();
-            this.is_Weapon = new E7_Gear_Optimizer.ItemStats();
-            this.is_Helmet = new E7_Gear_Optimizer.ItemStats();
-            this.is_Armor = new E7_Gear_Optimizer.ItemStats();
-            this.is_Necklace = new E7_Gear_Optimizer.ItemStats();
-            this.is_Ring = new E7_Gear_Optimizer.ItemStats();
-            this.is_Boots = new E7_Gear_Optimizer.ItemStats();
             this.tb_Optimize = new System.Windows.Forms.TabPage();
+            this.pb_OptimizeHeroPortrait = new System.Windows.Forms.PictureBox();
+            this.b_EquipLockOptimize = new System.Windows.Forms.Button();
+            this.chb_hideEquippedHeroes = new System.Windows.Forms.CheckBox();
             this.b_EquipUnlockOptimize = new System.Windows.Forms.Button();
             this.lbl_Sorting = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -409,12 +429,6 @@
             this.label52 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.cb_OptimizeHero = new System.Windows.Forms.ComboBox();
-            this.is_NecklaceOptimize = new E7_Gear_Optimizer.ItemStats();
-            this.is_BootsOptimize = new E7_Gear_Optimizer.ItemStats();
-            this.is_RingOptimize = new E7_Gear_Optimizer.ItemStats();
-            this.is_ArmorOptimize = new E7_Gear_Optimizer.ItemStats();
-            this.is_HelmetOptimize = new E7_Gear_Optimizer.ItemStats();
-            this.is_WeaponOptimize = new E7_Gear_Optimizer.ItemStats();
             this.tb_SpeedTuner = new System.Windows.Forms.TabPage();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
@@ -481,29 +495,18 @@
             this.sfd_export = new System.Windows.Forms.SaveFileDialog();
             this.tt_Skills = new System.Windows.Forms.ToolTip(this.components);
             this.tt_EquipUnlock = new System.Windows.Forms.ToolTip(this.components);
-            this.c_Portrait = new System.Windows.Forms.DataGridViewImageColumn();
-            this.c_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_Element = new System.Windows.Forms.DataGridViewImageColumn();
-            this.c_Class = new System.Windows.Forms.DataGridViewImageColumn();
-            this.c_Lvl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_Awakening = new System.Windows.Forms.DataGridViewImageColumn();
-            this.c_Sets = new System.Windows.Forms.DataGridViewImageColumn();
-            this.c_ATKHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_SPDHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_CritHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_CritDmgHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_HPHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_HPpSHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_DEFHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_EFFHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_RESHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_DACHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_EHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_EHPpSHero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_DMG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_DMGpS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_HeroPriority = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_HeroID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.is_Weapon = new E7_Gear_Optimizer.ItemStats();
+            this.is_Helmet = new E7_Gear_Optimizer.ItemStats();
+            this.is_Armor = new E7_Gear_Optimizer.ItemStats();
+            this.is_Necklace = new E7_Gear_Optimizer.ItemStats();
+            this.is_Ring = new E7_Gear_Optimizer.ItemStats();
+            this.is_Boots = new E7_Gear_Optimizer.ItemStats();
+            this.is_NecklaceOptimize = new E7_Gear_Optimizer.ItemStats();
+            this.is_BootsOptimize = new E7_Gear_Optimizer.ItemStats();
+            this.is_RingOptimize = new E7_Gear_Optimizer.ItemStats();
+            this.is_ArmorOptimize = new E7_Gear_Optimizer.ItemStats();
+            this.is_HelmetOptimize = new E7_Gear_Optimizer.ItemStats();
+            this.is_WeaponOptimize = new E7_Gear_Optimizer.ItemStats();
             this.tb_Inventory.SuspendLayout();
             this.tc_InventorySets.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ItemLocked)).BeginInit();
@@ -534,6 +537,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Heroes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Hero)).BeginInit();
             this.tb_Optimize.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeHeroPortrait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_EnemyDef)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_LimitResults)).BeginInit();
@@ -2766,6 +2770,198 @@
             this.dgv_Heroes.TabIndex = 0;
             this.dgv_Heroes.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Heroes_RowEnter);
             // 
+            // c_Portrait
+            // 
+            this.c_Portrait.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.c_Portrait.HeaderText = "Portrait";
+            this.c_Portrait.MinimumWidth = 8;
+            this.c_Portrait.Name = "c_Portrait";
+            this.c_Portrait.ReadOnly = true;
+            this.c_Portrait.Width = 60;
+            // 
+            // c_Name
+            // 
+            this.c_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.c_Name.HeaderText = "Name";
+            this.c_Name.MinimumWidth = 8;
+            this.c_Name.Name = "c_Name";
+            this.c_Name.ReadOnly = true;
+            this.c_Name.Width = 74;
+            // 
+            // c_Element
+            // 
+            this.c_Element.HeaderText = "Element";
+            this.c_Element.MinimumWidth = 8;
+            this.c_Element.Name = "c_Element";
+            this.c_Element.ReadOnly = true;
+            this.c_Element.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.c_Element.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.c_Element.Width = 88;
+            // 
+            // c_Class
+            // 
+            this.c_Class.HeaderText = "Class";
+            this.c_Class.MinimumWidth = 8;
+            this.c_Class.Name = "c_Class";
+            this.c_Class.ReadOnly = true;
+            this.c_Class.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.c_Class.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.c_Class.Width = 71;
+            // 
+            // c_Lvl
+            // 
+            this.c_Lvl.HeaderText = "Lvl";
+            this.c_Lvl.MinimumWidth = 8;
+            this.c_Lvl.Name = "c_Lvl";
+            this.c_Lvl.ReadOnly = true;
+            this.c_Lvl.Width = 55;
+            // 
+            // c_Awakening
+            // 
+            this.c_Awakening.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.c_Awakening.HeaderText = "Awakening";
+            this.c_Awakening.MinimumWidth = 8;
+            this.c_Awakening.Name = "c_Awakening";
+            this.c_Awakening.ReadOnly = true;
+            this.c_Awakening.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.c_Awakening.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.c_Awakening.Width = 105;
+            // 
+            // c_Sets
+            // 
+            this.c_Sets.HeaderText = "Sets";
+            this.c_Sets.MinimumWidth = 8;
+            this.c_Sets.Name = "c_Sets";
+            this.c_Sets.ReadOnly = true;
+            this.c_Sets.Width = 42;
+            // 
+            // c_ATKHero
+            // 
+            this.c_ATKHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_ATKHero.HeaderText = "ATK";
+            this.c_ATKHero.MinimumWidth = 8;
+            this.c_ATKHero.Name = "c_ATKHero";
+            this.c_ATKHero.ReadOnly = true;
+            // 
+            // c_SPDHero
+            // 
+            this.c_SPDHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_SPDHero.HeaderText = "SPD";
+            this.c_SPDHero.MinimumWidth = 8;
+            this.c_SPDHero.Name = "c_SPDHero";
+            this.c_SPDHero.ReadOnly = true;
+            // 
+            // c_CritHero
+            // 
+            this.c_CritHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_CritHero.HeaderText = "Crit";
+            this.c_CritHero.MinimumWidth = 8;
+            this.c_CritHero.Name = "c_CritHero";
+            this.c_CritHero.ReadOnly = true;
+            // 
+            // c_CritDmgHero
+            // 
+            this.c_CritDmgHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_CritDmgHero.HeaderText = "CritDmg";
+            this.c_CritDmgHero.MinimumWidth = 8;
+            this.c_CritDmgHero.Name = "c_CritDmgHero";
+            this.c_CritDmgHero.ReadOnly = true;
+            // 
+            // c_HPHero
+            // 
+            this.c_HPHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_HPHero.HeaderText = "HP";
+            this.c_HPHero.MinimumWidth = 8;
+            this.c_HPHero.Name = "c_HPHero";
+            this.c_HPHero.ReadOnly = true;
+            // 
+            // c_HPpSHero
+            // 
+            this.c_HPpSHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_HPpSHero.HeaderText = "HP/SPD";
+            this.c_HPpSHero.MinimumWidth = 8;
+            this.c_HPpSHero.Name = "c_HPpSHero";
+            this.c_HPpSHero.ReadOnly = true;
+            // 
+            // c_DEFHero
+            // 
+            this.c_DEFHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_DEFHero.HeaderText = "DEF";
+            this.c_DEFHero.MinimumWidth = 8;
+            this.c_DEFHero.Name = "c_DEFHero";
+            this.c_DEFHero.ReadOnly = true;
+            // 
+            // c_EFFHero
+            // 
+            this.c_EFFHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_EFFHero.HeaderText = "EFF";
+            this.c_EFFHero.MinimumWidth = 8;
+            this.c_EFFHero.Name = "c_EFFHero";
+            this.c_EFFHero.ReadOnly = true;
+            // 
+            // c_RESHero
+            // 
+            this.c_RESHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_RESHero.HeaderText = "RES";
+            this.c_RESHero.MinimumWidth = 8;
+            this.c_RESHero.Name = "c_RESHero";
+            this.c_RESHero.ReadOnly = true;
+            // 
+            // c_DACHero
+            // 
+            this.c_DACHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_DACHero.HeaderText = "DAC";
+            this.c_DACHero.MinimumWidth = 8;
+            this.c_DACHero.Name = "c_DACHero";
+            this.c_DACHero.ReadOnly = true;
+            // 
+            // c_EHP
+            // 
+            this.c_EHP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_EHP.HeaderText = "EHP";
+            this.c_EHP.MinimumWidth = 8;
+            this.c_EHP.Name = "c_EHP";
+            this.c_EHP.ReadOnly = true;
+            // 
+            // c_EHPpSHero
+            // 
+            this.c_EHPpSHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_EHPpSHero.HeaderText = "EHP/SPD";
+            this.c_EHPpSHero.MinimumWidth = 8;
+            this.c_EHPpSHero.Name = "c_EHPpSHero";
+            this.c_EHPpSHero.ReadOnly = true;
+            // 
+            // c_DMG
+            // 
+            this.c_DMG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_DMG.HeaderText = "DMG";
+            this.c_DMG.MinimumWidth = 8;
+            this.c_DMG.Name = "c_DMG";
+            this.c_DMG.ReadOnly = true;
+            // 
+            // c_DMGpS
+            // 
+            this.c_DMGpS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_DMGpS.HeaderText = "DMG/SPD";
+            this.c_DMGpS.MinimumWidth = 8;
+            this.c_DMGpS.Name = "c_DMGpS";
+            this.c_DMGpS.ReadOnly = true;
+            // 
+            // c_HeroPriority
+            // 
+            this.c_HeroPriority.HeaderText = "Priority";
+            this.c_HeroPriority.Name = "c_HeroPriority";
+            this.c_HeroPriority.ReadOnly = true;
+            this.c_HeroPriority.Width = 81;
+            // 
+            // c_HeroID
+            // 
+            this.c_HeroID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.c_HeroID.HeaderText = "ID";
+            this.c_HeroID.MinimumWidth = 8;
+            this.c_HeroID.Name = "c_HeroID";
+            this.c_HeroID.ReadOnly = true;
+            // 
             // b_EditBoots
             // 
             this.b_EditBoots.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
@@ -2884,74 +3080,11 @@
             this.b_AddHero.UseVisualStyleBackColor = true;
             this.b_AddHero.Click += new System.EventHandler(this.B_AddHero_Click);
             // 
-            // is_Weapon
-            // 
-            this.is_Weapon.Hero = null;
-            this.is_Weapon.Image = null;
-            this.is_Weapon.Item = null;
-            this.is_Weapon.Location = new System.Drawing.Point(107, 555);
-            this.is_Weapon.Margin = new System.Windows.Forms.Padding(5);
-            this.is_Weapon.Name = "is_Weapon";
-            this.is_Weapon.Size = new System.Drawing.Size(241, 258);
-            this.is_Weapon.TabIndex = 118;
-            // 
-            // is_Helmet
-            // 
-            this.is_Helmet.Hero = null;
-            this.is_Helmet.Image = null;
-            this.is_Helmet.Item = null;
-            this.is_Helmet.Location = new System.Drawing.Point(372, 555);
-            this.is_Helmet.Margin = new System.Windows.Forms.Padding(5);
-            this.is_Helmet.Name = "is_Helmet";
-            this.is_Helmet.Size = new System.Drawing.Size(241, 258);
-            this.is_Helmet.TabIndex = 117;
-            // 
-            // is_Armor
-            // 
-            this.is_Armor.Hero = null;
-            this.is_Armor.Image = null;
-            this.is_Armor.Item = null;
-            this.is_Armor.Location = new System.Drawing.Point(632, 555);
-            this.is_Armor.Margin = new System.Windows.Forms.Padding(5);
-            this.is_Armor.Name = "is_Armor";
-            this.is_Armor.Size = new System.Drawing.Size(241, 258);
-            this.is_Armor.TabIndex = 116;
-            // 
-            // is_Necklace
-            // 
-            this.is_Necklace.Hero = null;
-            this.is_Necklace.Image = null;
-            this.is_Necklace.Item = null;
-            this.is_Necklace.Location = new System.Drawing.Point(892, 555);
-            this.is_Necklace.Margin = new System.Windows.Forms.Padding(5);
-            this.is_Necklace.Name = "is_Necklace";
-            this.is_Necklace.Size = new System.Drawing.Size(241, 258);
-            this.is_Necklace.TabIndex = 115;
-            // 
-            // is_Ring
-            // 
-            this.is_Ring.Hero = null;
-            this.is_Ring.Image = null;
-            this.is_Ring.Item = null;
-            this.is_Ring.Location = new System.Drawing.Point(1152, 555);
-            this.is_Ring.Margin = new System.Windows.Forms.Padding(5);
-            this.is_Ring.Name = "is_Ring";
-            this.is_Ring.Size = new System.Drawing.Size(241, 258);
-            this.is_Ring.TabIndex = 114;
-            // 
-            // is_Boots
-            // 
-            this.is_Boots.Hero = null;
-            this.is_Boots.Image = null;
-            this.is_Boots.Item = null;
-            this.is_Boots.Location = new System.Drawing.Point(1412, 555);
-            this.is_Boots.Margin = new System.Windows.Forms.Padding(5);
-            this.is_Boots.Name = "is_Boots";
-            this.is_Boots.Size = new System.Drawing.Size(241, 258);
-            this.is_Boots.TabIndex = 113;
-            // 
             // tb_Optimize
             // 
+            this.tb_Optimize.Controls.Add(this.pb_OptimizeHeroPortrait);
+            this.tb_Optimize.Controls.Add(this.b_EquipLockOptimize);
+            this.tb_Optimize.Controls.Add(this.chb_hideEquippedHeroes);
             this.tb_Optimize.Controls.Add(this.b_EquipUnlockOptimize);
             this.tb_Optimize.Controls.Add(this.lbl_Sorting);
             this.tb_Optimize.Controls.Add(this.label35);
@@ -3006,9 +3139,40 @@
             this.tb_Optimize.UseVisualStyleBackColor = true;
             this.tb_Optimize.TextChanged += new System.EventHandler(this.Tb_Optimize_TextChanged);
             // 
+            // pb_OptimizeHeroPortrait
+            // 
+            this.pb_OptimizeHeroPortrait.Location = new System.Drawing.Point(10, 82);
+            this.pb_OptimizeHeroPortrait.Name = "pb_OptimizeHeroPortrait";
+            this.pb_OptimizeHeroPortrait.Size = new System.Drawing.Size(110, 110);
+            this.pb_OptimizeHeroPortrait.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_OptimizeHeroPortrait.TabIndex = 153;
+            this.pb_OptimizeHeroPortrait.TabStop = false;
+            // 
+            // b_EquipLockOptimize
+            // 
+            this.b_EquipLockOptimize.Location = new System.Drawing.Point(1099, 881);
+            this.b_EquipLockOptimize.Margin = new System.Windows.Forms.Padding(4);
+            this.b_EquipLockOptimize.Name = "b_EquipLockOptimize";
+            this.b_EquipLockOptimize.Size = new System.Drawing.Size(120, 28);
+            this.b_EquipLockOptimize.TabIndex = 152;
+            this.b_EquipLockOptimize.Text = "Equip + Lock";
+            this.b_EquipLockOptimize.UseVisualStyleBackColor = true;
+            this.b_EquipLockOptimize.Click += new System.EventHandler(this.b_EquipLockOptimize_Click);
+            // 
+            // chb_hideEquippedHeroes
+            // 
+            this.chb_hideEquippedHeroes.AutoSize = true;
+            this.chb_hideEquippedHeroes.Location = new System.Drawing.Point(7, 52);
+            this.chb_hideEquippedHeroes.Name = "chb_hideEquippedHeroes";
+            this.chb_hideEquippedHeroes.Size = new System.Drawing.Size(173, 21);
+            this.chb_hideEquippedHeroes.TabIndex = 151;
+            this.chb_hideEquippedHeroes.Text = "Hide Equipped Heroes";
+            this.chb_hideEquippedHeroes.UseVisualStyleBackColor = true;
+            this.chb_hideEquippedHeroes.CheckedChanged += new System.EventHandler(this.chb_hideEquippedHeroes_CheckedChanged);
+            // 
             // b_EquipUnlockOptimize
             // 
-            this.b_EquipUnlockOptimize.Location = new System.Drawing.Point(971, 881);
+            this.b_EquipUnlockOptimize.Location = new System.Drawing.Point(821, 881);
             this.b_EquipUnlockOptimize.Margin = new System.Windows.Forms.Padding(4);
             this.b_EquipUnlockOptimize.Name = "b_EquipUnlockOptimize";
             this.b_EquipUnlockOptimize.Size = new System.Drawing.Size(120, 28);
@@ -3031,7 +3195,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(4, 228);
+            this.label35.Location = new System.Drawing.Point(134, 260);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(124, 34);
@@ -3041,7 +3205,7 @@
             // 
             // nud_EnemyDef
             // 
-            this.nud_EnemyDef.Location = new System.Drawing.Point(8, 266);
+            this.nud_EnemyDef.Location = new System.Drawing.Point(138, 298);
             this.nud_EnemyDef.Margin = new System.Windows.Forms.Padding(4);
             this.nud_EnemyDef.Maximum = new decimal(new int[] {
             9999,
@@ -3126,8 +3290,6 @@
             // cb_LimitResults
             // 
             this.cb_LimitResults.AutoSize = true;
-            this.cb_LimitResults.Checked = true;
-            this.cb_LimitResults.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cb_LimitResults.Location = new System.Drawing.Point(8, 299);
             this.cb_LimitResults.Margin = new System.Windows.Forms.Padding(4);
             this.cb_LimitResults.Name = "cb_LimitResults";
@@ -3203,8 +3365,6 @@
             // cb_Broken
             // 
             this.cb_Broken.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cb_Broken.Checked = true;
-            this.cb_Broken.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cb_Broken.Location = new System.Drawing.Point(1, 250);
             this.cb_Broken.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Broken.Name = "cb_Broken";
@@ -3414,7 +3574,7 @@
             // 
             // b_FilterResults
             // 
-            this.b_FilterResults.Location = new System.Drawing.Point(37, 316);
+            this.b_FilterResults.Location = new System.Drawing.Point(80, 338);
             this.b_FilterResults.Margin = new System.Windows.Forms.Padding(4);
             this.b_FilterResults.Name = "b_FilterResults";
             this.b_FilterResults.Size = new System.Drawing.Size(100, 44);
@@ -3486,7 +3646,7 @@
             // cb_keepEquip
             // 
             this.cb_keepEquip.AutoSize = true;
-            this.cb_keepEquip.Location = new System.Drawing.Point(8, 112);
+            this.cb_keepEquip.Location = new System.Drawing.Point(7, 280);
             this.cb_keepEquip.Margin = new System.Windows.Forms.Padding(4);
             this.cb_keepEquip.Name = "cb_keepEquip";
             this.cb_keepEquip.Size = new System.Drawing.Size(126, 38);
@@ -3498,7 +3658,7 @@
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(893, 22);
+            this.label60.Location = new System.Drawing.Point(898, 22);
             this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(33, 17);
@@ -3508,7 +3668,7 @@
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(572, 22);
+            this.label61.Location = new System.Drawing.Point(683, 22);
             this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(30, 17);
@@ -3519,7 +3679,7 @@
             // 
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.Location = new System.Drawing.Point(572, 0);
+            this.label62.Location = new System.Drawing.Point(683, 0);
             this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(49, 17);
@@ -3565,7 +3725,7 @@
             this.tlb_Force.Controls.Add(this.tb_MaxCritForce, 2, 3);
             this.tlb_Force.Controls.Add(this.tb_MaxSPDForce, 2, 2);
             this.tlb_Force.Controls.Add(this.tb_MaxDEFForce, 2, 7);
-            this.tlb_Force.Location = new System.Drawing.Point(572, 43);
+            this.tlb_Force.Location = new System.Drawing.Point(683, 43);
             this.tlb_Force.Margin = new System.Windows.Forms.Padding(4);
             this.tlb_Force.Name = "tlb_Force";
             this.tlb_Force.RowCount = 11;
@@ -3580,16 +3740,16 @@
             this.tlb_Force.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.tlb_Force.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.tlb_Force.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tlb_Force.Size = new System.Drawing.Size(356, 359);
+            this.tlb_Force.Size = new System.Drawing.Size(250, 359);
             this.tlb_Force.TabIndex = 6;
             // 
             // tb_MaxDEFPercentForce
             // 
             this.tb_MaxDEFPercentForce.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_MaxDEFPercentForce.Location = new System.Drawing.Point(240, 261);
+            this.tb_MaxDEFPercentForce.Location = new System.Drawing.Point(170, 261);
             this.tb_MaxDEFPercentForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MaxDEFPercentForce.Name = "tb_MaxDEFPercentForce";
-            this.tb_MaxDEFPercentForce.Size = new System.Drawing.Size(112, 22);
+            this.tb_MaxDEFPercentForce.Size = new System.Drawing.Size(76, 22);
             this.tb_MaxDEFPercentForce.TabIndex = 17;
             this.tb_MaxDEFPercentForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
@@ -3599,17 +3759,17 @@
             this.tb_MinDEFPercentForce.Location = new System.Drawing.Point(4, 261);
             this.tb_MinDEFPercentForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MinDEFPercentForce.Name = "tb_MinDEFPercentForce";
-            this.tb_MinDEFPercentForce.Size = new System.Drawing.Size(110, 22);
+            this.tb_MinDEFPercentForce.Size = new System.Drawing.Size(75, 22);
             this.tb_MinDEFPercentForce.TabIndex = 16;
             this.tb_MinDEFPercentForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
             // tb_MaxHPPercentForce
             // 
             this.tb_MaxHPPercentForce.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_MaxHPPercentForce.Location = new System.Drawing.Point(240, 197);
+            this.tb_MaxHPPercentForce.Location = new System.Drawing.Point(170, 197);
             this.tb_MaxHPPercentForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MaxHPPercentForce.Name = "tb_MaxHPPercentForce";
-            this.tb_MaxHPPercentForce.Size = new System.Drawing.Size(112, 22);
+            this.tb_MaxHPPercentForce.Size = new System.Drawing.Size(76, 22);
             this.tb_MaxHPPercentForce.TabIndex = 13;
             this.tb_MaxHPPercentForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
@@ -3619,17 +3779,17 @@
             this.tb_MinHPPercentForce.Location = new System.Drawing.Point(4, 197);
             this.tb_MinHPPercentForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MinHPPercentForce.Name = "tb_MinHPPercentForce";
-            this.tb_MinHPPercentForce.Size = new System.Drawing.Size(110, 22);
+            this.tb_MinHPPercentForce.Size = new System.Drawing.Size(75, 22);
             this.tb_MinHPPercentForce.TabIndex = 12;
             this.tb_MinHPPercentForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
             // tb_MaxATKPercentForce
             // 
             this.tb_MaxATKPercentForce.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_MaxATKPercentForce.Location = new System.Drawing.Point(240, 37);
+            this.tb_MaxATKPercentForce.Location = new System.Drawing.Point(170, 37);
             this.tb_MaxATKPercentForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MaxATKPercentForce.Name = "tb_MaxATKPercentForce";
-            this.tb_MaxATKPercentForce.Size = new System.Drawing.Size(112, 22);
+            this.tb_MaxATKPercentForce.Size = new System.Drawing.Size(76, 22);
             this.tb_MaxATKPercentForce.TabIndex = 3;
             this.tb_MaxATKPercentForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
@@ -3637,10 +3797,10 @@
             // 
             this.label78.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(122, 199);
+            this.label78.Location = new System.Drawing.Point(87, 199);
             this.label78.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(110, 17);
+            this.label78.Size = new System.Drawing.Size(75, 17);
             this.label78.TabIndex = 131;
             this.label78.Text = "Health%";
             this.label78.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3649,10 +3809,10 @@
             // 
             this.label77.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(122, 39);
+            this.label77.Location = new System.Drawing.Point(87, 39);
             this.label77.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(110, 17);
+            this.label77.Size = new System.Drawing.Size(75, 17);
             this.label77.TabIndex = 130;
             this.label77.Text = "Attack%";
             this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3661,10 +3821,10 @@
             // 
             this.label75.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(122, 231);
+            this.label75.Location = new System.Drawing.Point(87, 231);
             this.label75.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(110, 17);
+            this.label75.Size = new System.Drawing.Size(75, 17);
             this.label75.TabIndex = 12;
             this.label75.Text = "Defense";
             this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3675,17 +3835,17 @@
             this.tb_MinCritDmgForce.Location = new System.Drawing.Point(4, 133);
             this.tb_MinCritDmgForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MinCritDmgForce.Name = "tb_MinCritDmgForce";
-            this.tb_MinCritDmgForce.Size = new System.Drawing.Size(110, 22);
+            this.tb_MinCritDmgForce.Size = new System.Drawing.Size(75, 22);
             this.tb_MinCritDmgForce.TabIndex = 8;
             this.tb_MinCritDmgForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
             // tb_MaxATKForce
             // 
             this.tb_MaxATKForce.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_MaxATKForce.Location = new System.Drawing.Point(240, 5);
+            this.tb_MaxATKForce.Location = new System.Drawing.Point(170, 5);
             this.tb_MaxATKForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MaxATKForce.Name = "tb_MaxATKForce";
-            this.tb_MaxATKForce.Size = new System.Drawing.Size(112, 22);
+            this.tb_MaxATKForce.Size = new System.Drawing.Size(76, 22);
             this.tb_MaxATKForce.TabIndex = 1;
             this.tb_MaxATKForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
@@ -3695,7 +3855,7 @@
             this.tb_MinCritForce.Location = new System.Drawing.Point(4, 101);
             this.tb_MinCritForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MinCritForce.Name = "tb_MinCritForce";
-            this.tb_MinCritForce.Size = new System.Drawing.Size(110, 22);
+            this.tb_MinCritForce.Size = new System.Drawing.Size(75, 22);
             this.tb_MinCritForce.TabIndex = 6;
             this.tb_MinCritForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
@@ -3703,10 +3863,10 @@
             // 
             this.label63.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(122, 7);
+            this.label63.Location = new System.Drawing.Point(87, 7);
             this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(110, 17);
+            this.label63.Size = new System.Drawing.Size(75, 17);
             this.label63.TabIndex = 0;
             this.label63.Text = "Attack";
             this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3717,7 +3877,7 @@
             this.tb_MinATKForce.Location = new System.Drawing.Point(4, 5);
             this.tb_MinATKForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MinATKForce.Name = "tb_MinATKForce";
-            this.tb_MinATKForce.Size = new System.Drawing.Size(110, 22);
+            this.tb_MinATKForce.Size = new System.Drawing.Size(75, 22);
             this.tb_MinATKForce.TabIndex = 0;
             this.tb_MinATKForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
@@ -3725,10 +3885,10 @@
             // 
             this.label74.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(122, 331);
+            this.label74.Location = new System.Drawing.Point(87, 331);
             this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(110, 17);
+            this.label74.Size = new System.Drawing.Size(75, 17);
             this.label74.TabIndex = 7;
             this.label74.Text = "Resist";
             this.label74.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3739,17 +3899,17 @@
             this.tb_MinRESForce.Location = new System.Drawing.Point(4, 328);
             this.tb_MinRESForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MinRESForce.Name = "tb_MinRESForce";
-            this.tb_MinRESForce.Size = new System.Drawing.Size(110, 22);
+            this.tb_MinRESForce.Size = new System.Drawing.Size(75, 22);
             this.tb_MinRESForce.TabIndex = 20;
             this.tb_MinRESForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
             // tb_MaxRESForce
             // 
             this.tb_MaxRESForce.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_MaxRESForce.Location = new System.Drawing.Point(240, 328);
+            this.tb_MaxRESForce.Location = new System.Drawing.Point(170, 328);
             this.tb_MaxRESForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MaxRESForce.Name = "tb_MaxRESForce";
-            this.tb_MaxRESForce.Size = new System.Drawing.Size(112, 22);
+            this.tb_MaxRESForce.Size = new System.Drawing.Size(76, 22);
             this.tb_MaxRESForce.TabIndex = 21;
             this.tb_MaxRESForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
@@ -3757,10 +3917,10 @@
             // 
             this.label73.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(122, 295);
+            this.label73.Location = new System.Drawing.Point(87, 295);
             this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(110, 17);
+            this.label73.Size = new System.Drawing.Size(75, 17);
             this.label73.TabIndex = 6;
             this.label73.Text = "Eff";
             this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3771,17 +3931,17 @@
             this.tb_MinEFFForce.Location = new System.Drawing.Point(4, 293);
             this.tb_MinEFFForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MinEFFForce.Name = "tb_MinEFFForce";
-            this.tb_MinEFFForce.Size = new System.Drawing.Size(110, 22);
+            this.tb_MinEFFForce.Size = new System.Drawing.Size(75, 22);
             this.tb_MinEFFForce.TabIndex = 18;
             this.tb_MinEFFForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
             // tb_MaxEFFForce
             // 
             this.tb_MaxEFFForce.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_MaxEFFForce.Location = new System.Drawing.Point(240, 293);
+            this.tb_MaxEFFForce.Location = new System.Drawing.Point(170, 293);
             this.tb_MaxEFFForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MaxEFFForce.Name = "tb_MaxEFFForce";
-            this.tb_MaxEFFForce.Size = new System.Drawing.Size(112, 22);
+            this.tb_MaxEFFForce.Size = new System.Drawing.Size(76, 22);
             this.tb_MaxEFFForce.TabIndex = 19;
             this.tb_MaxEFFForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
@@ -3789,10 +3949,10 @@
             // 
             this.label71.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(122, 263);
+            this.label71.Location = new System.Drawing.Point(87, 263);
             this.label71.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(110, 17);
+            this.label71.Size = new System.Drawing.Size(75, 17);
             this.label71.TabIndex = 5;
             this.label71.Text = "Defense%";
             this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3801,10 +3961,10 @@
             // 
             this.label69.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(122, 167);
+            this.label69.Location = new System.Drawing.Point(87, 167);
             this.label69.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(110, 17);
+            this.label69.Size = new System.Drawing.Size(75, 17);
             this.label69.TabIndex = 4;
             this.label69.Text = "Health";
             this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3813,10 +3973,10 @@
             // 
             this.label68.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(122, 135);
+            this.label68.Location = new System.Drawing.Point(87, 135);
             this.label68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(110, 17);
+            this.label68.Size = new System.Drawing.Size(75, 17);
             this.label68.TabIndex = 3;
             this.label68.Text = "CritDmg";
             this.label68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3825,10 +3985,10 @@
             // 
             this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(122, 103);
+            this.label67.Location = new System.Drawing.Point(87, 103);
             this.label67.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(110, 17);
+            this.label67.Size = new System.Drawing.Size(75, 17);
             this.label67.TabIndex = 2;
             this.label67.Text = "Crit";
             this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3837,10 +3997,10 @@
             // 
             this.label66.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(122, 71);
+            this.label66.Location = new System.Drawing.Point(87, 71);
             this.label66.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(110, 17);
+            this.label66.Size = new System.Drawing.Size(75, 17);
             this.label66.TabIndex = 1;
             this.label66.Text = "Speed";
             this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3851,7 +4011,7 @@
             this.tb_MinSPDForce.Location = new System.Drawing.Point(4, 69);
             this.tb_MinSPDForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MinSPDForce.Name = "tb_MinSPDForce";
-            this.tb_MinSPDForce.Size = new System.Drawing.Size(110, 22);
+            this.tb_MinSPDForce.Size = new System.Drawing.Size(75, 22);
             this.tb_MinSPDForce.TabIndex = 4;
             this.tb_MinSPDForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
@@ -3861,7 +4021,7 @@
             this.tb_MinATKPercentForce.Location = new System.Drawing.Point(4, 37);
             this.tb_MinATKPercentForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MinATKPercentForce.Name = "tb_MinATKPercentForce";
-            this.tb_MinATKPercentForce.Size = new System.Drawing.Size(110, 22);
+            this.tb_MinATKPercentForce.Size = new System.Drawing.Size(75, 22);
             this.tb_MinATKPercentForce.TabIndex = 2;
             this.tb_MinATKPercentForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
@@ -3871,7 +4031,7 @@
             this.tb_MinHPForce.Location = new System.Drawing.Point(4, 165);
             this.tb_MinHPForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MinHPForce.Name = "tb_MinHPForce";
-            this.tb_MinHPForce.Size = new System.Drawing.Size(110, 22);
+            this.tb_MinHPForce.Size = new System.Drawing.Size(75, 22);
             this.tb_MinHPForce.TabIndex = 10;
             this.tb_MinHPForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
@@ -3881,64 +4041,64 @@
             this.tb_MinDEFForce.Location = new System.Drawing.Point(4, 229);
             this.tb_MinDEFForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MinDEFForce.Name = "tb_MinDEFForce";
-            this.tb_MinDEFForce.Size = new System.Drawing.Size(110, 22);
+            this.tb_MinDEFForce.Size = new System.Drawing.Size(75, 22);
             this.tb_MinDEFForce.TabIndex = 14;
             this.tb_MinDEFForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
             // tb_MaxHPForce
             // 
             this.tb_MaxHPForce.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_MaxHPForce.Location = new System.Drawing.Point(240, 165);
+            this.tb_MaxHPForce.Location = new System.Drawing.Point(170, 165);
             this.tb_MaxHPForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MaxHPForce.Name = "tb_MaxHPForce";
-            this.tb_MaxHPForce.Size = new System.Drawing.Size(112, 22);
+            this.tb_MaxHPForce.Size = new System.Drawing.Size(76, 22);
             this.tb_MaxHPForce.TabIndex = 11;
             this.tb_MaxHPForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
             // tb_MaxCritDmgForce
             // 
             this.tb_MaxCritDmgForce.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_MaxCritDmgForce.Location = new System.Drawing.Point(240, 133);
+            this.tb_MaxCritDmgForce.Location = new System.Drawing.Point(170, 133);
             this.tb_MaxCritDmgForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MaxCritDmgForce.Name = "tb_MaxCritDmgForce";
-            this.tb_MaxCritDmgForce.Size = new System.Drawing.Size(112, 22);
+            this.tb_MaxCritDmgForce.Size = new System.Drawing.Size(76, 22);
             this.tb_MaxCritDmgForce.TabIndex = 9;
             this.tb_MaxCritDmgForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
             // tb_MaxCritForce
             // 
             this.tb_MaxCritForce.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_MaxCritForce.Location = new System.Drawing.Point(240, 101);
+            this.tb_MaxCritForce.Location = new System.Drawing.Point(170, 101);
             this.tb_MaxCritForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MaxCritForce.Name = "tb_MaxCritForce";
-            this.tb_MaxCritForce.Size = new System.Drawing.Size(112, 22);
+            this.tb_MaxCritForce.Size = new System.Drawing.Size(76, 22);
             this.tb_MaxCritForce.TabIndex = 7;
             this.tb_MaxCritForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
             // tb_MaxSPDForce
             // 
             this.tb_MaxSPDForce.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_MaxSPDForce.Location = new System.Drawing.Point(240, 69);
+            this.tb_MaxSPDForce.Location = new System.Drawing.Point(170, 69);
             this.tb_MaxSPDForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MaxSPDForce.Name = "tb_MaxSPDForce";
-            this.tb_MaxSPDForce.Size = new System.Drawing.Size(112, 22);
+            this.tb_MaxSPDForce.Size = new System.Drawing.Size(76, 22);
             this.tb_MaxSPDForce.TabIndex = 5;
             this.tb_MaxSPDForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
             // tb_MaxDEFForce
             // 
             this.tb_MaxDEFForce.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_MaxDEFForce.Location = new System.Drawing.Point(240, 229);
+            this.tb_MaxDEFForce.Location = new System.Drawing.Point(170, 229);
             this.tb_MaxDEFForce.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MaxDEFForce.Name = "tb_MaxDEFForce";
-            this.tb_MaxDEFForce.Size = new System.Drawing.Size(112, 22);
+            this.tb_MaxDEFForce.Size = new System.Drawing.Size(76, 22);
             this.tb_MaxDEFForce.TabIndex = 15;
             this.tb_MaxDEFForce.TextChanged += new System.EventHandler(this.Tb_Force_TextChanged);
             // 
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(4, 164);
+            this.label49.Location = new System.Drawing.Point(134, 196);
             this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(170, 34);
@@ -3947,7 +4107,7 @@
             // 
             // nud_CritBonus
             // 
-            this.nud_CritBonus.Location = new System.Drawing.Point(8, 199);
+            this.nud_CritBonus.Location = new System.Drawing.Point(138, 231);
             this.nud_CritBonus.Margin = new System.Windows.Forms.Padding(4);
             this.nud_CritBonus.Name = "nud_CritBonus";
             this.nud_CritBonus.Size = new System.Drawing.Size(61, 22);
@@ -3966,7 +4126,7 @@
             // 
             // b_EquipOptimize
             // 
-            this.b_EquipOptimize.Location = new System.Drawing.Point(1119, 881);
+            this.b_EquipOptimize.Location = new System.Drawing.Point(971, 881);
             this.b_EquipOptimize.Margin = new System.Windows.Forms.Padding(4);
             this.b_EquipOptimize.Name = "b_EquipOptimize";
             this.b_EquipOptimize.Size = new System.Drawing.Size(100, 28);
@@ -4021,7 +4181,7 @@
             // chb_Equipped
             // 
             this.chb_Equipped.AutoSize = true;
-            this.chb_Equipped.Location = new System.Drawing.Point(8, 84);
+            this.chb_Equipped.Location = new System.Drawing.Point(7, 240);
             this.chb_Equipped.Margin = new System.Windows.Forms.Padding(4);
             this.chb_Equipped.Name = "chb_Equipped";
             this.chb_Equipped.Size = new System.Drawing.Size(127, 21);
@@ -4033,7 +4193,7 @@
             // chb_Locked
             // 
             this.chb_Locked.AutoSize = true;
-            this.chb_Locked.Location = new System.Drawing.Point(8, 55);
+            this.chb_Locked.Location = new System.Drawing.Point(7, 200);
             this.chb_Locked.Margin = new System.Windows.Forms.Padding(4);
             this.chb_Locked.Name = "chb_Locked";
             this.chb_Locked.Size = new System.Drawing.Size(113, 21);
@@ -4585,7 +4745,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(520, 22);
+            this.label34.Location = new System.Drawing.Point(631, 22);
             this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(33, 17);
@@ -4595,7 +4755,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(199, 22);
+            this.label21.Location = new System.Drawing.Point(310, 22);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(30, 17);
@@ -4606,7 +4766,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(199, 1);
+            this.label19.Location = new System.Drawing.Point(310, 1);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(45, 17);
@@ -4658,7 +4818,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tb_MinDMGpS, 0, 12);
             this.tableLayoutPanel1.Controls.Add(this.label51, 1, 10);
             this.tableLayoutPanel1.Controls.Add(this.label52, 1, 12);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(199, 43);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(310, 43);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 13;
@@ -5111,72 +5271,6 @@
             this.cb_OptimizeHero.Size = new System.Drawing.Size(160, 24);
             this.cb_OptimizeHero.TabIndex = 0;
             this.cb_OptimizeHero.SelectedIndexChanged += new System.EventHandler(this.Cb_OptimizeHero_SelectedIndexChanged);
-            // 
-            // is_NecklaceOptimize
-            // 
-            this.is_NecklaceOptimize.Hero = null;
-            this.is_NecklaceOptimize.Image = null;
-            this.is_NecklaceOptimize.Item = null;
-            this.is_NecklaceOptimize.Location = new System.Drawing.Point(1677, 1);
-            this.is_NecklaceOptimize.Margin = new System.Windows.Forms.Padding(5);
-            this.is_NecklaceOptimize.Name = "is_NecklaceOptimize";
-            this.is_NecklaceOptimize.Size = new System.Drawing.Size(241, 258);
-            this.is_NecklaceOptimize.TabIndex = 146;
-            // 
-            // is_BootsOptimize
-            // 
-            this.is_BootsOptimize.Hero = null;
-            this.is_BootsOptimize.Image = null;
-            this.is_BootsOptimize.Item = null;
-            this.is_BootsOptimize.Location = new System.Drawing.Point(1677, 641);
-            this.is_BootsOptimize.Margin = new System.Windows.Forms.Padding(5);
-            this.is_BootsOptimize.Name = "is_BootsOptimize";
-            this.is_BootsOptimize.Size = new System.Drawing.Size(241, 258);
-            this.is_BootsOptimize.TabIndex = 117;
-            // 
-            // is_RingOptimize
-            // 
-            this.is_RingOptimize.Hero = null;
-            this.is_RingOptimize.Image = null;
-            this.is_RingOptimize.Item = null;
-            this.is_RingOptimize.Location = new System.Drawing.Point(1677, 318);
-            this.is_RingOptimize.Margin = new System.Windows.Forms.Padding(5);
-            this.is_RingOptimize.Name = "is_RingOptimize";
-            this.is_RingOptimize.Size = new System.Drawing.Size(241, 258);
-            this.is_RingOptimize.TabIndex = 145;
-            // 
-            // is_ArmorOptimize
-            // 
-            this.is_ArmorOptimize.Hero = null;
-            this.is_ArmorOptimize.Image = null;
-            this.is_ArmorOptimize.Item = null;
-            this.is_ArmorOptimize.Location = new System.Drawing.Point(1329, 641);
-            this.is_ArmorOptimize.Margin = new System.Windows.Forms.Padding(5);
-            this.is_ArmorOptimize.Name = "is_ArmorOptimize";
-            this.is_ArmorOptimize.Size = new System.Drawing.Size(241, 258);
-            this.is_ArmorOptimize.TabIndex = 144;
-            // 
-            // is_HelmetOptimize
-            // 
-            this.is_HelmetOptimize.Hero = null;
-            this.is_HelmetOptimize.Image = null;
-            this.is_HelmetOptimize.Item = null;
-            this.is_HelmetOptimize.Location = new System.Drawing.Point(1329, 319);
-            this.is_HelmetOptimize.Margin = new System.Windows.Forms.Padding(5);
-            this.is_HelmetOptimize.Name = "is_HelmetOptimize";
-            this.is_HelmetOptimize.Size = new System.Drawing.Size(241, 258);
-            this.is_HelmetOptimize.TabIndex = 143;
-            // 
-            // is_WeaponOptimize
-            // 
-            this.is_WeaponOptimize.Hero = null;
-            this.is_WeaponOptimize.Image = null;
-            this.is_WeaponOptimize.Item = null;
-            this.is_WeaponOptimize.Location = new System.Drawing.Point(1329, 1);
-            this.is_WeaponOptimize.Margin = new System.Windows.Forms.Padding(5);
-            this.is_WeaponOptimize.Name = "is_WeaponOptimize";
-            this.is_WeaponOptimize.Size = new System.Drawing.Size(241, 258);
-            this.is_WeaponOptimize.TabIndex = 142;
             // 
             // tb_SpeedTuner
             // 
@@ -6066,197 +6160,137 @@
             this.sfd_export.FileName = "E7 Gear Optimizer.json";
             this.sfd_export.Filter = "JSON|*.json";
             // 
-            // c_Portrait
+            // is_Weapon
             // 
-            this.c_Portrait.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.c_Portrait.HeaderText = "Portrait";
-            this.c_Portrait.MinimumWidth = 8;
-            this.c_Portrait.Name = "c_Portrait";
-            this.c_Portrait.ReadOnly = true;
-            this.c_Portrait.Width = 60;
+            this.is_Weapon.Hero = null;
+            this.is_Weapon.Image = null;
+            this.is_Weapon.Item = null;
+            this.is_Weapon.Location = new System.Drawing.Point(107, 555);
+            this.is_Weapon.Margin = new System.Windows.Forms.Padding(5);
+            this.is_Weapon.Name = "is_Weapon";
+            this.is_Weapon.Size = new System.Drawing.Size(241, 258);
+            this.is_Weapon.TabIndex = 118;
             // 
-            // c_Name
+            // is_Helmet
             // 
-            this.c_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.c_Name.HeaderText = "Name";
-            this.c_Name.MinimumWidth = 8;
-            this.c_Name.Name = "c_Name";
-            this.c_Name.ReadOnly = true;
-            this.c_Name.Width = 74;
+            this.is_Helmet.Hero = null;
+            this.is_Helmet.Image = null;
+            this.is_Helmet.Item = null;
+            this.is_Helmet.Location = new System.Drawing.Point(372, 555);
+            this.is_Helmet.Margin = new System.Windows.Forms.Padding(5);
+            this.is_Helmet.Name = "is_Helmet";
+            this.is_Helmet.Size = new System.Drawing.Size(241, 258);
+            this.is_Helmet.TabIndex = 117;
             // 
-            // c_Element
+            // is_Armor
             // 
-            this.c_Element.HeaderText = "Element";
-            this.c_Element.MinimumWidth = 8;
-            this.c_Element.Name = "c_Element";
-            this.c_Element.ReadOnly = true;
-            this.c_Element.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.c_Element.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.c_Element.Width = 88;
+            this.is_Armor.Hero = null;
+            this.is_Armor.Image = null;
+            this.is_Armor.Item = null;
+            this.is_Armor.Location = new System.Drawing.Point(632, 555);
+            this.is_Armor.Margin = new System.Windows.Forms.Padding(5);
+            this.is_Armor.Name = "is_Armor";
+            this.is_Armor.Size = new System.Drawing.Size(241, 258);
+            this.is_Armor.TabIndex = 116;
             // 
-            // c_Class
+            // is_Necklace
             // 
-            this.c_Class.HeaderText = "Class";
-            this.c_Class.MinimumWidth = 8;
-            this.c_Class.Name = "c_Class";
-            this.c_Class.ReadOnly = true;
-            this.c_Class.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.c_Class.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.c_Class.Width = 71;
+            this.is_Necklace.Hero = null;
+            this.is_Necklace.Image = null;
+            this.is_Necklace.Item = null;
+            this.is_Necklace.Location = new System.Drawing.Point(892, 555);
+            this.is_Necklace.Margin = new System.Windows.Forms.Padding(5);
+            this.is_Necklace.Name = "is_Necklace";
+            this.is_Necklace.Size = new System.Drawing.Size(241, 258);
+            this.is_Necklace.TabIndex = 115;
             // 
-            // c_Lvl
+            // is_Ring
             // 
-            this.c_Lvl.HeaderText = "Lvl";
-            this.c_Lvl.MinimumWidth = 8;
-            this.c_Lvl.Name = "c_Lvl";
-            this.c_Lvl.ReadOnly = true;
-            this.c_Lvl.Width = 55;
+            this.is_Ring.Hero = null;
+            this.is_Ring.Image = null;
+            this.is_Ring.Item = null;
+            this.is_Ring.Location = new System.Drawing.Point(1152, 555);
+            this.is_Ring.Margin = new System.Windows.Forms.Padding(5);
+            this.is_Ring.Name = "is_Ring";
+            this.is_Ring.Size = new System.Drawing.Size(241, 258);
+            this.is_Ring.TabIndex = 114;
             // 
-            // c_Awakening
+            // is_Boots
             // 
-            this.c_Awakening.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.c_Awakening.HeaderText = "Awakening";
-            this.c_Awakening.MinimumWidth = 8;
-            this.c_Awakening.Name = "c_Awakening";
-            this.c_Awakening.ReadOnly = true;
-            this.c_Awakening.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.c_Awakening.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.c_Awakening.Width = 105;
+            this.is_Boots.Hero = null;
+            this.is_Boots.Image = null;
+            this.is_Boots.Item = null;
+            this.is_Boots.Location = new System.Drawing.Point(1412, 555);
+            this.is_Boots.Margin = new System.Windows.Forms.Padding(5);
+            this.is_Boots.Name = "is_Boots";
+            this.is_Boots.Size = new System.Drawing.Size(241, 258);
+            this.is_Boots.TabIndex = 113;
             // 
-            // c_Sets
+            // is_NecklaceOptimize
             // 
-            this.c_Sets.HeaderText = "Sets";
-            this.c_Sets.MinimumWidth = 8;
-            this.c_Sets.Name = "c_Sets";
-            this.c_Sets.ReadOnly = true;
-            this.c_Sets.Width = 42;
+            this.is_NecklaceOptimize.Hero = null;
+            this.is_NecklaceOptimize.Image = null;
+            this.is_NecklaceOptimize.Item = null;
+            this.is_NecklaceOptimize.Location = new System.Drawing.Point(1677, 1);
+            this.is_NecklaceOptimize.Margin = new System.Windows.Forms.Padding(5);
+            this.is_NecklaceOptimize.Name = "is_NecklaceOptimize";
+            this.is_NecklaceOptimize.Size = new System.Drawing.Size(241, 258);
+            this.is_NecklaceOptimize.TabIndex = 146;
             // 
-            // c_ATKHero
+            // is_BootsOptimize
             // 
-            this.c_ATKHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_ATKHero.HeaderText = "ATK";
-            this.c_ATKHero.MinimumWidth = 8;
-            this.c_ATKHero.Name = "c_ATKHero";
-            this.c_ATKHero.ReadOnly = true;
+            this.is_BootsOptimize.Hero = null;
+            this.is_BootsOptimize.Image = null;
+            this.is_BootsOptimize.Item = null;
+            this.is_BootsOptimize.Location = new System.Drawing.Point(1677, 641);
+            this.is_BootsOptimize.Margin = new System.Windows.Forms.Padding(5);
+            this.is_BootsOptimize.Name = "is_BootsOptimize";
+            this.is_BootsOptimize.Size = new System.Drawing.Size(241, 258);
+            this.is_BootsOptimize.TabIndex = 117;
             // 
-            // c_SPDHero
+            // is_RingOptimize
             // 
-            this.c_SPDHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_SPDHero.HeaderText = "SPD";
-            this.c_SPDHero.MinimumWidth = 8;
-            this.c_SPDHero.Name = "c_SPDHero";
-            this.c_SPDHero.ReadOnly = true;
+            this.is_RingOptimize.Hero = null;
+            this.is_RingOptimize.Image = null;
+            this.is_RingOptimize.Item = null;
+            this.is_RingOptimize.Location = new System.Drawing.Point(1677, 318);
+            this.is_RingOptimize.Margin = new System.Windows.Forms.Padding(5);
+            this.is_RingOptimize.Name = "is_RingOptimize";
+            this.is_RingOptimize.Size = new System.Drawing.Size(241, 258);
+            this.is_RingOptimize.TabIndex = 145;
             // 
-            // c_CritHero
+            // is_ArmorOptimize
             // 
-            this.c_CritHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_CritHero.HeaderText = "Crit";
-            this.c_CritHero.MinimumWidth = 8;
-            this.c_CritHero.Name = "c_CritHero";
-            this.c_CritHero.ReadOnly = true;
+            this.is_ArmorOptimize.Hero = null;
+            this.is_ArmorOptimize.Image = null;
+            this.is_ArmorOptimize.Item = null;
+            this.is_ArmorOptimize.Location = new System.Drawing.Point(1329, 641);
+            this.is_ArmorOptimize.Margin = new System.Windows.Forms.Padding(5);
+            this.is_ArmorOptimize.Name = "is_ArmorOptimize";
+            this.is_ArmorOptimize.Size = new System.Drawing.Size(241, 258);
+            this.is_ArmorOptimize.TabIndex = 144;
             // 
-            // c_CritDmgHero
+            // is_HelmetOptimize
             // 
-            this.c_CritDmgHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_CritDmgHero.HeaderText = "CritDmg";
-            this.c_CritDmgHero.MinimumWidth = 8;
-            this.c_CritDmgHero.Name = "c_CritDmgHero";
-            this.c_CritDmgHero.ReadOnly = true;
+            this.is_HelmetOptimize.Hero = null;
+            this.is_HelmetOptimize.Image = null;
+            this.is_HelmetOptimize.Item = null;
+            this.is_HelmetOptimize.Location = new System.Drawing.Point(1329, 319);
+            this.is_HelmetOptimize.Margin = new System.Windows.Forms.Padding(5);
+            this.is_HelmetOptimize.Name = "is_HelmetOptimize";
+            this.is_HelmetOptimize.Size = new System.Drawing.Size(241, 258);
+            this.is_HelmetOptimize.TabIndex = 143;
             // 
-            // c_HPHero
+            // is_WeaponOptimize
             // 
-            this.c_HPHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_HPHero.HeaderText = "HP";
-            this.c_HPHero.MinimumWidth = 8;
-            this.c_HPHero.Name = "c_HPHero";
-            this.c_HPHero.ReadOnly = true;
-            // 
-            // c_HPpSHero
-            // 
-            this.c_HPpSHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_HPpSHero.HeaderText = "HP/SPD";
-            this.c_HPpSHero.MinimumWidth = 8;
-            this.c_HPpSHero.Name = "c_HPpSHero";
-            this.c_HPpSHero.ReadOnly = true;
-            // 
-            // c_DEFHero
-            // 
-            this.c_DEFHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_DEFHero.HeaderText = "DEF";
-            this.c_DEFHero.MinimumWidth = 8;
-            this.c_DEFHero.Name = "c_DEFHero";
-            this.c_DEFHero.ReadOnly = true;
-            // 
-            // c_EFFHero
-            // 
-            this.c_EFFHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_EFFHero.HeaderText = "EFF";
-            this.c_EFFHero.MinimumWidth = 8;
-            this.c_EFFHero.Name = "c_EFFHero";
-            this.c_EFFHero.ReadOnly = true;
-            // 
-            // c_RESHero
-            // 
-            this.c_RESHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_RESHero.HeaderText = "RES";
-            this.c_RESHero.MinimumWidth = 8;
-            this.c_RESHero.Name = "c_RESHero";
-            this.c_RESHero.ReadOnly = true;
-            // 
-            // c_DACHero
-            // 
-            this.c_DACHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_DACHero.HeaderText = "DAC";
-            this.c_DACHero.MinimumWidth = 8;
-            this.c_DACHero.Name = "c_DACHero";
-            this.c_DACHero.ReadOnly = true;
-            // 
-            // c_EHP
-            // 
-            this.c_EHP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_EHP.HeaderText = "EHP";
-            this.c_EHP.MinimumWidth = 8;
-            this.c_EHP.Name = "c_EHP";
-            this.c_EHP.ReadOnly = true;
-            // 
-            // c_EHPpSHero
-            // 
-            this.c_EHPpSHero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_EHPpSHero.HeaderText = "EHP/SPD";
-            this.c_EHPpSHero.MinimumWidth = 8;
-            this.c_EHPpSHero.Name = "c_EHPpSHero";
-            this.c_EHPpSHero.ReadOnly = true;
-            // 
-            // c_DMG
-            // 
-            this.c_DMG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_DMG.HeaderText = "DMG";
-            this.c_DMG.MinimumWidth = 8;
-            this.c_DMG.Name = "c_DMG";
-            this.c_DMG.ReadOnly = true;
-            // 
-            // c_DMGpS
-            // 
-            this.c_DMGpS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_DMGpS.HeaderText = "DMG/SPD";
-            this.c_DMGpS.MinimumWidth = 8;
-            this.c_DMGpS.Name = "c_DMGpS";
-            this.c_DMGpS.ReadOnly = true;
-            // 
-            // c_HeroPriority
-            // 
-            this.c_HeroPriority.HeaderText = "Priority";
-            this.c_HeroPriority.Name = "c_HeroPriority";
-            this.c_HeroPriority.ReadOnly = true;
-            this.c_HeroPriority.Width = 81;
-            // 
-            // c_HeroID
-            // 
-            this.c_HeroID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.c_HeroID.HeaderText = "ID";
-            this.c_HeroID.MinimumWidth = 8;
-            this.c_HeroID.Name = "c_HeroID";
-            this.c_HeroID.ReadOnly = true;
+            this.is_WeaponOptimize.Hero = null;
+            this.is_WeaponOptimize.Image = null;
+            this.is_WeaponOptimize.Item = null;
+            this.is_WeaponOptimize.Location = new System.Drawing.Point(1329, 1);
+            this.is_WeaponOptimize.Margin = new System.Windows.Forms.Padding(5);
+            this.is_WeaponOptimize.Name = "is_WeaponOptimize";
+            this.is_WeaponOptimize.Size = new System.Drawing.Size(241, 258);
+            this.is_WeaponOptimize.TabIndex = 142;
             // 
             // Main
             // 
@@ -6265,7 +6299,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1945, 891);
+            this.ClientSize = new System.Drawing.Size(1924, 912);
             this.Controls.Add(this.tc_Main);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -6312,6 +6346,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_Hero)).EndInit();
             this.tb_Optimize.ResumeLayout(false);
             this.tb_Optimize.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeHeroPortrait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_EnemyDef)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -6754,21 +6789,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmi_EHPpS;
         private System.Windows.Forms.ToolStripMenuItem tsmi_DMG;
         private System.Windows.Forms.ToolStripMenuItem tsmi_DMGpS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_ATK_Results;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_SPD_Results;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_Crit_Results;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_CritDmg_Results;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_HP_Results;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_HPpS_Results;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_DEF_Results;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_EFF_Results;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_RES_Results;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_DAC_Results;
-        private System.Windows.Forms.DataGridViewImageColumn c_Sets_Results;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_EHP_Results;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_EHPpS_Results;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_DMG_Results;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_DMGpS_Results;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_ATK_Current;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_SPD_Current;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_Crit_Current;
@@ -6828,6 +6848,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn c_DMGpS;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_HeroPriority;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_HeroID;
+        private System.Windows.Forms.CheckBox chb_hideEquippedHeroes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_ATK_Results;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_SPD_Results;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_Crit_Results;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_CritDmg_Results;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_HP_Results;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_HPpS_Results;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_DEF_Results;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_EFF_Results;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_RES_Results;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_DAC_Results;
+        private System.Windows.Forms.DataGridViewImageColumn c_Sets_Results;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_EHP_Results;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_EHPpS_Results;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_DMG_Results;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_DMGpS_Results;
+        private System.Windows.Forms.Button b_EquipLockOptimize;
+        private System.Windows.Forms.PictureBox pb_OptimizeHeroPortrait;
     }
 }
 
