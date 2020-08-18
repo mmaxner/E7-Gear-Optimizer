@@ -69,6 +69,8 @@ namespace E7_Gear_Optimizer
                         pb_Image.Image = (Image)Properties.Resources.ResourceManager.GetObject(item.Type.ToString().ToLower());
                     }
                     pb_ItemSet.Image = (Image)Properties.Resources.ResourceManager.GetObject("set " + item.Set.ToString().ToLower().Replace("def", "defense"));
+                    pb_Locked.Visible = true;
+                    pb_Locked.Image = item.Locked ? (Image)Properties.Resources.ResourceManager.GetObject("locked") : (Image)Properties.Resources.ResourceManager.GetObject("unlocked");
                 }
                 else
                 {
@@ -87,6 +89,7 @@ namespace E7_Gear_Optimizer
                         pb_Image.Image = null;
                     }
                     pb_ItemSet.Image = null;
+                    pb_Locked.Visible = false;
                 }
             }
         }
@@ -124,6 +127,15 @@ namespace E7_Gear_Optimizer
             set
             {
                 pb_Image.Image = image = value;
+            }
+        }
+
+        private void pb_Locked_Click(object sender, System.EventArgs e)
+        {
+            if (Item != null)
+            {
+                Item.Locked = !Item.Locked;
+                pb_Locked.Image = item.Locked ? (Image)Properties.Resources.ResourceManager.GetObject("locked") : (Image)Properties.Resources.ResourceManager.GetObject("unlocked");
             }
         }
     }

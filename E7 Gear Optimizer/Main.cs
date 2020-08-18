@@ -412,14 +412,17 @@ namespace E7_Gear_Optimizer
             }
             else if (((TabControl)(sender)).SelectedIndex == 3)
             {
+                BindingSource bs = new BindingSource();
+                cb_OptimizeHero.DataSource = bs;
+
                 allHeroes.Clear();
                 foreach (Hero hero in data.Heroes.OrderBy(h => h.Priority).ToList())
                 {
                     allHeroes.Add(hero.Name + " " + hero.ID);
                 }
                 calculateUnEquippedHeroes();
-                l_Results.Text = numberOfResults().ToString("#,0");
-                updateCurrentGear();
+
+                Cb_OptimizeHero_SelectedIndexChanged(null, null);
             }
             else if (((TabControl)(sender)).SelectedIndex == 4)
             {
@@ -1193,6 +1196,13 @@ namespace E7_Gear_Optimizer
             }
         }
 
+        private void _unequipitem(ItemType itemType)
+        {
+            Hero hero = data.Heroes.Find(x => x.ID == (string)dgv_Heroes["c_HeroID", dgv_Heroes.SelectedCells[0].RowIndex].Value);
+            hero.unequip(hero.getItem(itemType));
+            updateHeroList();
+        }
+
         /// <summary>
         /// Switch to the Inventory tab and select the equipped item
         /// </summary>
@@ -1220,6 +1230,7 @@ namespace E7_Gear_Optimizer
         private void B_EquipWeapon_Click(object sender, EventArgs e)
         {
             _equipItem(ItemType.Weapon);
+            
         }
 
         //Delete the selected Hero and unequip his/her gear
@@ -1320,6 +1331,7 @@ namespace E7_Gear_Optimizer
             is_NecklaceOptimize.Hero = hero;
             is_RingOptimize.Hero = hero;
             is_BootsOptimize.Hero = hero;
+            optimizeDisplayGear(hero.getGear());
             updateCurrentGear();
             l_Results.Text = numberOfResults().ToString("#,0");
             pb_OptimizeHeroPortrait.Image = hero.Portrait;
@@ -2046,26 +2058,31 @@ namespace E7_Gear_Optimizer
                         items = combinations[e.RowIndex].Item1.ToList();
                     }
                 }
-                Item item;
-                item = items.Find(x => x.Type == ItemType.Weapon);
-                is_WeaponOptimize.Item = item;
-                pb_OptimizeWeaponEquipped.Image = item?.Equipped?.Portrait;
-                item = items.Find(x => x.Type == ItemType.Helmet);
-                is_HelmetOptimize.Item = item;
-                pb_OptimizeHelmetEquipped.Image = item?.Equipped?.Portrait;
-                item = items.Find(x => x.Type == ItemType.Armor);
-                is_ArmorOptimize.Item = item;
-                pb_OptimizeArmorEquipped.Image = item?.Equipped?.Portrait;
-                item = items.Find(x => x.Type == ItemType.Necklace);
-                is_NecklaceOptimize.Item = item;
-                pb_OptimizeNecklaceEquipped.Image = item?.Equipped?.Portrait;
-                item = items.Find(x => x.Type == ItemType.Ring);
-                is_RingOptimize.Item = item;
-                pb_OptimizeRingEquipped.Image = item?.Equipped?.Portrait;
-                item = items.Find(x => x.Type == ItemType.Boots);
-                is_BootsOptimize.Item = item;
-                pb_OptimizeBootsEquipped.Image = item?.Equipped?.Portrait;
+                optimizeDisplayGear(items);
             }
+        }
+
+        private void optimizeDisplayGear(List<Item> items)
+        {
+            Item item;
+            item = items.Find(x => x.Type == ItemType.Weapon);
+            is_WeaponOptimize.Item = item;
+            pb_OptimizeWeaponEquipped.Image = item?.Equipped?.Portrait;
+            item = items.Find(x => x.Type == ItemType.Helmet);
+            is_HelmetOptimize.Item = item;
+            pb_OptimizeHelmetEquipped.Image = item?.Equipped?.Portrait;
+            item = items.Find(x => x.Type == ItemType.Armor);
+            is_ArmorOptimize.Item = item;
+            pb_OptimizeArmorEquipped.Image = item?.Equipped?.Portrait;
+            item = items.Find(x => x.Type == ItemType.Necklace);
+            is_NecklaceOptimize.Item = item;
+            pb_OptimizeNecklaceEquipped.Image = item?.Equipped?.Portrait;
+            item = items.Find(x => x.Type == ItemType.Ring);
+            is_RingOptimize.Item = item;
+            pb_OptimizeRingEquipped.Image = item?.Equipped?.Portrait;
+            item = items.Find(x => x.Type == ItemType.Boots);
+            is_BootsOptimize.Item = item;
+            pb_OptimizeBootsEquipped.Image = item?.Equipped?.Portrait;
         }
 
         //Equip the currenty selected optimization result and update the current stats of the hero
@@ -2856,18 +2873,26 @@ namespace E7_Gear_Optimizer
 
         private void b_EquipLockOptimize_Click(object sender, EventArgs e)
         {
-            Hero hero = data.Heroes.Find(x => x.ID == cb_OptimizeHero.Text.Split(' ').Last());
-            B_EquipOptimize_Click(null, null);
-            List<Item> gear = hero.getGear();
-            foreach (Item item in gear)
+            List<Item> items;
+            if (filteredCombinations.Count > 0)
+            {
+                items = combinations[filteredCombinations[dgv_OptimizeResults.SelectedCells[0].RowIndex + ((optimizePage - 1) * 100)]].Item1.ToList();
+            }
+            else
+            {
+                items = combinations[dgv_OptimizeResults.SelectedCells[0].RowIndex + ((optimizePage - 1) * 100)].Item1.ToList();
+            }
+            foreach (Item item in items)
             {
                 item.Locked = true;
             }
+            B_EquipOptimize_Click(null, null);
         }
 
         private void chb_hideEquippedHeroes_CheckedChanged(object sender, EventArgs e)
         {
-            cb_OptimizeHero.DataSource = chb_hideEquippedHeroes.Checked ? unEquippedHeroes : allHeroes;
+            ((BindingSource)cb_OptimizeHero.DataSource).DataSource = chb_hideEquippedHeroes.Checked ? unEquippedHeroes : allHeroes;
+            Cb_OptimizeHero_SelectedIndexChanged(null, null);
         }
 
         private void calculateUnEquippedHeroes()
@@ -2886,12 +2911,43 @@ namespace E7_Gear_Optimizer
                         if (!item.Locked)
                         {
                             unEquippedHeroes.Add(hero.Name + " " + hero.ID);
+                            break;
                         }
                     }
                 }
             }
-            cb_OptimizeHero.DataSource = null;
-            cb_OptimizeHero.DataSource = chb_hideEquippedHeroes.Checked ? unEquippedHeroes : allHeroes;
+            ((BindingSource)cb_OptimizeHero.DataSource).DataSource = chb_hideEquippedHeroes.Checked ? unEquippedHeroes : allHeroes;
+            Cb_OptimizeHero_SelectedIndexChanged(null, null);
+        }
+
+        private void b_UnequipWeapon_Click(object sender, EventArgs e)
+        {
+            _unequipitem(ItemType.Weapon);
+        }
+
+        private void b_UnEquipHelmet_Click(object sender, EventArgs e)
+        {
+            _unequipitem(ItemType.Helmet);
+        }
+
+        private void b_UnequipArmor_Click(object sender, EventArgs e)
+        {
+            _unequipitem(ItemType.Armor);
+        }
+
+        private void b_UnequipNecklace_Click(object sender, EventArgs e)
+        {
+            _unequipitem(ItemType.Necklace);
+        }
+
+        private void b_UnequipRing_Click(object sender, EventArgs e)
+        {
+            _unequipitem(ItemType.Ring);
+        }
+
+        private void b_UnequipBoot_Click(object sender, EventArgs e)
+        {
+            _unequipitem(ItemType.Boots);
         }
     }
 }
