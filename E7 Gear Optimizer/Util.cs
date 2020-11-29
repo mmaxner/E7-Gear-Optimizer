@@ -39,7 +39,10 @@ namespace E7_Gear_Optimizer
         Resist,
         Rage,
         Immunity,
-        Unity
+        Unity,
+        Revenge,
+        Injury,
+        Penetration
     }
 
     public enum Grade
@@ -181,7 +184,7 @@ namespace E7_Gear_Optimizer
             Stats.RES
         };
 
-        public static HashSet<Set> fourPieceSets = new HashSet<Set>() { Set.Attack, Set.Destruction, Set.Lifesteal, Set.Rage, Set.Speed, Set.Counter };
+        public static HashSet<Set> fourPieceSets = new HashSet<Set>() { Set.Attack, Set.Destruction, Set.Lifesteal, Set.Rage, Set.Speed, Set.Counter, Set.Revenge, Set.Injury };
 
         //Faster alternative to fourPieceSets.Contains() or Dictionary<Set, bool> to determine if a set is 4-piece set. Each index represents (int)Set
         private static readonly bool[] isFourPieceSetArray;

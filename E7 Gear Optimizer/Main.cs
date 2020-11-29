@@ -37,6 +37,12 @@ namespace E7_Gear_Optimizer
         static bool limitResults = Properties.Settings.Default.LimitResults;
         static int limitResultsNum = Properties.Settings.Default.LimitResultsNum;
         static long resultsCurrent;//long is used to allow use Interlocked.Read() as that method is more clear than .CompareExchange()
+
+
+        static bool useForcedWSS = false;
+        static Decimal minWSS = 0;
+        static SStats.StatScaling scaler = new SStats.StatScaling();
+
         public bool useCache
         {
             get => Properties.Settings.Default.UseCache;
@@ -168,6 +174,9 @@ namespace E7_Gear_Optimizer
             Sets.Images.Add(Properties.Resources.set_rage);
             Sets.Images.Add(Properties.Resources.set_immunity);
             Sets.Images.Add(Properties.Resources.set_unity);
+            Sets.Images.Add(Properties.Resources.set_revenge);
+            Sets.Images.Add(Properties.Resources.set_injury);
+            Sets.Images.Add(Properties.Resources.set_penetration);
             for (int i = 1; i < tc_InventorySets.TabPages.Count; i++)
             {
                 tc_InventorySets.TabPages[i].ImageIndex = i - 1;
@@ -1526,6 +1535,17 @@ namespace E7_Gear_Optimizer
                 List<Item> necklaces = getRightSideGear(data.Items, ItemType.Necklace).ToList();
                 List<Item> rings = getRightSideGear(data.Items, ItemType.Ring).ToList();
                 List<Item> boots = getRightSideGear(data.Items, ItemType.Boots).ToList();
+
+                if (useForcedWSS)
+                {
+                    weapons = weapons.Where(x => x.WSS >= (float)minWSS).ToList();
+                    helmets = helmets.Where(x => x.WSS >= (float)minWSS).ToList();
+                    armors = armors.Where(x => x.WSS >= (float)minWSS).ToList();
+                    necklaces = necklaces.Where(x => x.WSS >= (float)minWSS).ToList();
+                    rings = rings.Where(x => x.WSS >= (float)minWSS).ToList();
+                    boots = boots.Where(x => x.WSS >= (float)minWSS).ToList();
+                }
+
                 if (!chb_Equipped.Checked)
                 {
                     weapons = weapons.Where(x => x.Equipped == null || x.Equipped == hero).ToList();
@@ -1719,7 +1739,7 @@ namespace E7_Gear_Optimizer
                         if (valid)
                         {
                             SStats setBonusStats = hero.setBonusStats(activeSets);
-                            SStats calculatedStats = new SStats();
+                            SStats calculatedStats = new SStats(scaler);
                             calculatedStats.ATK = (sStats.ATK * (1 + sItemStats.ATKPercent + setBonusStats.ATKPercent)) + sItemStats.ATK + hero.Artifact.SubStats[0].Value;
                             calculatedStats.HP = (sStats.HP * (1 + sItemStats.HPPercent + setBonusStats.HPPercent)) + sItemStats.HP + hero.Artifact.SubStats[1].Value;
                             calculatedStats.DEF = (sStats.DEF * (1 + sItemStats.DEFPercent + setBonusStats.DEFPercent)) + sItemStats.DEF;
@@ -2948,6 +2968,36 @@ namespace E7_Gear_Optimizer
         private void b_UnequipBoot_Click(object sender, EventArgs e)
         {
             _unequipitem(ItemType.Boots);
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            useForcedWSS = checkBox1.Checked;
+        }
+
+        private void numericUpDown5_ValueChanged(object sender, EventArgs e)
+        {
+            scaler.ATKScaling = (float)numericUpDown5.Value;
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            scaler.HPScaling = (float)numericUpDown2.Value;
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+            scaler.DEFScaling = (float)numericUpDown3.Value;
+        }
+
+        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
+        {
+            scaler.SPDMultiplier = (float)numericUpDown4.Value;
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            minWSS = numericUpDown1.Value;
         }
     }
 }

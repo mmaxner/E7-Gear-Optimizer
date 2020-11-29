@@ -16,6 +16,12 @@ namespace E7_Gear_Optimizer
         /// </summary>
         public SStats()
         {
+            Scaling = new StatScaling();
+        }
+
+        public SStats(StatScaling scaler)
+        {
+            Scaling = scaler;
         }
 
         /// <summary>
@@ -35,6 +41,7 @@ namespace E7_Gear_Optimizer
             DEF = stats.ContainsKey(Stats.DEF) ? stats[Stats.DEF] : 0;
             EFF = stats.ContainsKey(Stats.EFF) ? stats[Stats.EFF] : 0;
             RES = stats.ContainsKey(Stats.RES) ? stats[Stats.RES] : 0;
+            Scaling = new StatScaling();
         }
 
         /// <summary>
@@ -54,6 +61,7 @@ namespace E7_Gear_Optimizer
             DEF = sStats.DEF;
             EFF = sStats.EFF;
             RES = sStats.RES;
+            Scaling = sStats.Scaling;
         }
 
         public float ATKPercent { get; set; }
@@ -71,8 +79,12 @@ namespace E7_Gear_Optimizer
         public float HPpS { get => HP * SPD / 100; }
         public float EHP { get => HP * (1 + (DEF / 300)); }
         public float EHPpS { get => EHP * SPD / 100; }
-        public float DMG { get => (ATK * (1 - CritCapped)) + (ATK * CritCapped * CritDmg); }
+        public float EHPDefBuff { get => HP * (1 + ((DEF * 1.6f) / 300)); }
+        public float EHPDefBuffPS { get => EHPDefBuff * SPD / 100; }
+        private float baseDMG { get => ((ATK * Scaling.ATKScaling / 100) + (HP * Scaling.HPScaling / 100) + (DEF * Scaling.DEFScaling / 100)) * (1 + SPD * (Scaling.SPDMultiplier / 10000)); }
+        public float DMG { get => (baseDMG * (1 - CritCapped)) + (baseDMG * CritCapped * CritDmg); }
         public float DMGpS { get => DMG * SPD / 100; }
+        public StatScaling Scaling { get; set; }
 
         /// <summary>
         /// Adds values of <paramref name="sStats"/> properties to corresponding values of the <see cref="SStats"/>
@@ -165,6 +177,22 @@ namespace E7_Gear_Optimizer
             foreach (var stat in stats)
             {
                 SetStat(stat);
+            }
+        }
+
+        public class StatScaling
+        {
+            public float ATKScaling { get; set; }
+            public float HPScaling { get; set; }
+            public float DEFScaling { get; set; }
+            public float SPDMultiplier { get; set; }
+
+            public StatScaling()
+            {
+                ATKScaling = 100;
+                HPScaling = 0;
+                DEFScaling = 0;
+                SPDMultiplier = 0;
             }
         }
     }

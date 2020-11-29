@@ -324,5 +324,14 @@
   <ItemGroup>
     <None Include="Resources\newEquipped.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set revenge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set injury.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set penetration.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

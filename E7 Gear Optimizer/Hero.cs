@@ -391,6 +391,7 @@ namespace E7_Gear_Optimizer
             return stats;
         }
 
+
         public List<Set> activeSets()
         {
             return Util.activeSet(gear.Values.ToList());

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,6 +38,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.tb_Inventory = new System.Windows.Forms.TabPage();
             this.l_ItemCount = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -58,10 +58,6 @@
             this.tabPage34 = new System.Windows.Forms.TabPage();
             this.tabPage35 = new System.Windows.Forms.TabPage();
             this.Sets = new System.Windows.Forms.ImageList(this.components);
-            this.b_NewItemEquipped = new System.Windows.Forms.Button();
-            this.pb_ItemLocked = new System.Windows.Forms.PictureBox();
-            this.b_RemoveItem = new System.Windows.Forms.Button();
-            this.pb_Equipped = new System.Windows.Forms.PictureBox();
             this.cb_Eq = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.nud_Sub4 = new System.Windows.Forms.NumericUpDown();
@@ -88,27 +84,8 @@
             this.rb_EpicGrade = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.p_Type = new System.Windows.Forms.Panel();
-            this.rb_BootsType = new System.Windows.Forms.RadioButton();
-            this.rb_RingType = new System.Windows.Forms.RadioButton();
-            this.rb_NecklaceType = new System.Windows.Forms.RadioButton();
-            this.rb_ArmorType = new System.Windows.Forms.RadioButton();
-            this.rb_HelmetType = new System.Windows.Forms.RadioButton();
-            this.rb_WeaponType = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.p_Set = new System.Windows.Forms.Panel();
-            this.rb_UnitySet = new System.Windows.Forms.RadioButton();
-            this.rb_ImmunitySet = new System.Windows.Forms.RadioButton();
-            this.rb_RageSet = new System.Windows.Forms.RadioButton();
-            this.rb_ResistSet = new System.Windows.Forms.RadioButton();
-            this.rb_DestructionSet = new System.Windows.Forms.RadioButton();
-            this.rb_LifestealSet = new System.Windows.Forms.RadioButton();
-            this.rb_CounterSet = new System.Windows.Forms.RadioButton();
-            this.rb_AttackSet = new System.Windows.Forms.RadioButton();
-            this.rb_HealthSet = new System.Windows.Forms.RadioButton();
-            this.rb_DefSet = new System.Windows.Forms.RadioButton();
-            this.rb_CritSet = new System.Windows.Forms.RadioButton();
-            this.rb_HitSet = new System.Windows.Forms.RadioButton();
-            this.rb_SpeedSet = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_Inventory = new System.Windows.Forms.DataGridView();
             this.c_set = new System.Windows.Forms.DataGridViewImageColumn();
@@ -144,8 +121,6 @@
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.Types = new System.Windows.Forms.ImageList(this.components);
-            this.b_EditItem = new System.Windows.Forms.Button();
-            this.b_NewItem = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.l_Status = new System.Windows.Forms.Label();
             this.l_ImportResults = new System.Windows.Forms.Label();
@@ -236,24 +211,17 @@
             this.c_DMGpS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c_HeroPriority = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c_HeroID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.b_EditBoots = new System.Windows.Forms.Button();
-            this.b_EditRing = new System.Windows.Forms.Button();
-            this.b_EditNecklace = new System.Windows.Forms.Button();
-            this.b_EditArmor = new System.Windows.Forms.Button();
-            this.b_EditHelmet = new System.Windows.Forms.Button();
-            this.b_EditWeapon = new System.Windows.Forms.Button();
-            this.pb_Hero = new System.Windows.Forms.PictureBox();
-            this.b_RemoveHero = new System.Windows.Forms.Button();
-            this.b_EditHero = new System.Windows.Forms.Button();
-            this.b_AddHero = new System.Windows.Forms.Button();
-            this.is_Weapon = new E7_Gear_Optimizer.ItemStats();
-            this.is_Helmet = new E7_Gear_Optimizer.ItemStats();
-            this.is_Armor = new E7_Gear_Optimizer.ItemStats();
-            this.is_Necklace = new E7_Gear_Optimizer.ItemStats();
-            this.is_Ring = new E7_Gear_Optimizer.ItemStats();
-            this.is_Boots = new E7_Gear_Optimizer.ItemStats();
             this.tb_Optimize = new System.Windows.Forms.TabPage();
-            this.pb_OptimizeHeroPortrait = new System.Windows.Forms.PictureBox();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.b_EquipLockOptimize = new System.Windows.Forms.Button();
             this.chb_hideEquippedHeroes = new System.Windows.Forms.CheckBox();
             this.b_EquipUnlockOptimize = new System.Windows.Forms.Button();
@@ -287,12 +255,6 @@
             this.l_Results = new System.Windows.Forms.Label();
             this.b_CancelOptimize = new System.Windows.Forms.Button();
             this.b_FilterResults = new System.Windows.Forms.Button();
-            this.pb_OptimizeBootsEquipped = new System.Windows.Forms.PictureBox();
-            this.pb_OptimizeRingEquipped = new System.Windows.Forms.PictureBox();
-            this.pb_OptimizeNecklaceEquipped = new System.Windows.Forms.PictureBox();
-            this.pb_OptimizeWeaponEquipped = new System.Windows.Forms.PictureBox();
-            this.pb_OptimizeArmorEquipped = new System.Windows.Forms.PictureBox();
-            this.pb_OptimizeHelmetEquipped = new System.Windows.Forms.PictureBox();
             this.cb_keepEquip = new System.Windows.Forms.CheckBox();
             this.label49 = new System.Windows.Forms.Label();
             this.nud_CritBonus = new System.Windows.Forms.NumericUpDown();
@@ -404,12 +366,6 @@
             this.label52 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.cb_OptimizeHero = new System.Windows.Forms.ComboBox();
-            this.is_NecklaceOptimize = new E7_Gear_Optimizer.ItemStats();
-            this.is_BootsOptimize = new E7_Gear_Optimizer.ItemStats();
-            this.is_RingOptimize = new E7_Gear_Optimizer.ItemStats();
-            this.is_ArmorOptimize = new E7_Gear_Optimizer.ItemStats();
-            this.is_HelmetOptimize = new E7_Gear_Optimizer.ItemStats();
-            this.is_WeaponOptimize = new E7_Gear_Optimizer.ItemStats();
             this.tb_SpeedTuner = new System.Windows.Forms.TabPage();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
@@ -424,7 +380,6 @@
             this.tb4_SpeedTunerGear = new System.Windows.Forms.TextBox();
             this.label99 = new System.Windows.Forms.Label();
             this.label100 = new System.Windows.Forms.Label();
-            this.pb4_SpeedTuner = new System.Windows.Forms.PictureBox();
             this.cb4_SpeedTuner = new System.Windows.Forms.ComboBox();
             this.label101 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -439,7 +394,6 @@
             this.tb3_SpeedTunerGear = new System.Windows.Forms.TextBox();
             this.label91 = new System.Windows.Forms.Label();
             this.label92 = new System.Windows.Forms.Label();
-            this.pb3_SpeedTuner = new System.Windows.Forms.PictureBox();
             this.cb3_SpeedTuner = new System.Windows.Forms.ComboBox();
             this.label94 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -454,7 +408,6 @@
             this.tb2_SpeedTunerGear = new System.Windows.Forms.TextBox();
             this.label84 = new System.Windows.Forms.Label();
             this.label86 = new System.Windows.Forms.Label();
-            this.pb2_SpeedTuner = new System.Windows.Forms.PictureBox();
             this.cb2_SpeedTuner = new System.Windows.Forms.ComboBox();
             this.label87 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -469,17 +422,78 @@
             this.label56 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.nud1_SpeedTunerImprint = new System.Windows.Forms.NumericUpDown();
-            this.pb1_SpeedTuner = new System.Windows.Forms.PictureBox();
             this.cb1_SpeedTuner = new System.Windows.Forms.ComboBox();
             this.label53 = new System.Windows.Forms.Label();
             this.ofd_import = new System.Windows.Forms.OpenFileDialog();
             this.sfd_export = new System.Windows.Forms.SaveFileDialog();
             this.tt_Skills = new System.Windows.Forms.ToolTip(this.components);
             this.tt_EquipUnlock = new System.Windows.Forms.ToolTip(this.components);
+            this.tabPage36 = new System.Windows.Forms.TabPage();
+            this.tabPage37 = new System.Windows.Forms.TabPage();
+            this.tabPage38 = new System.Windows.Forms.TabPage();
+            this.b_NewItemEquipped = new System.Windows.Forms.Button();
+            this.pb_ItemLocked = new System.Windows.Forms.PictureBox();
+            this.b_RemoveItem = new System.Windows.Forms.Button();
+            this.pb_Equipped = new System.Windows.Forms.PictureBox();
+            this.rb_BootsType = new System.Windows.Forms.RadioButton();
+            this.rb_RingType = new System.Windows.Forms.RadioButton();
+            this.rb_NecklaceType = new System.Windows.Forms.RadioButton();
+            this.rb_ArmorType = new System.Windows.Forms.RadioButton();
+            this.rb_HelmetType = new System.Windows.Forms.RadioButton();
+            this.rb_WeaponType = new System.Windows.Forms.RadioButton();
+            this.rb_PenetrationSet = new System.Windows.Forms.RadioButton();
+            this.rb_InjurySet = new System.Windows.Forms.RadioButton();
+            this.rb_RevengeSet = new System.Windows.Forms.RadioButton();
+            this.rb_UnitySet = new System.Windows.Forms.RadioButton();
+            this.rb_ImmunitySet = new System.Windows.Forms.RadioButton();
+            this.rb_RageSet = new System.Windows.Forms.RadioButton();
+            this.rb_ResistSet = new System.Windows.Forms.RadioButton();
+            this.rb_DestructionSet = new System.Windows.Forms.RadioButton();
+            this.rb_LifestealSet = new System.Windows.Forms.RadioButton();
+            this.rb_CounterSet = new System.Windows.Forms.RadioButton();
+            this.rb_AttackSet = new System.Windows.Forms.RadioButton();
+            this.rb_HealthSet = new System.Windows.Forms.RadioButton();
+            this.rb_DefSet = new System.Windows.Forms.RadioButton();
+            this.rb_CritSet = new System.Windows.Forms.RadioButton();
+            this.rb_HitSet = new System.Windows.Forms.RadioButton();
+            this.rb_SpeedSet = new System.Windows.Forms.RadioButton();
+            this.b_EditItem = new System.Windows.Forms.Button();
+            this.b_NewItem = new System.Windows.Forms.Button();
+            this.b_EditBoots = new System.Windows.Forms.Button();
+            this.b_EditRing = new System.Windows.Forms.Button();
+            this.b_EditNecklace = new System.Windows.Forms.Button();
+            this.b_EditArmor = new System.Windows.Forms.Button();
+            this.b_EditHelmet = new System.Windows.Forms.Button();
+            this.b_EditWeapon = new System.Windows.Forms.Button();
+            this.pb_Hero = new System.Windows.Forms.PictureBox();
+            this.b_RemoveHero = new System.Windows.Forms.Button();
+            this.b_EditHero = new System.Windows.Forms.Button();
+            this.b_AddHero = new System.Windows.Forms.Button();
+            this.pb_OptimizeHeroPortrait = new System.Windows.Forms.PictureBox();
+            this.pb_OptimizeBootsEquipped = new System.Windows.Forms.PictureBox();
+            this.pb_OptimizeRingEquipped = new System.Windows.Forms.PictureBox();
+            this.pb_OptimizeNecklaceEquipped = new System.Windows.Forms.PictureBox();
+            this.pb_OptimizeWeaponEquipped = new System.Windows.Forms.PictureBox();
+            this.pb_OptimizeArmorEquipped = new System.Windows.Forms.PictureBox();
+            this.pb_OptimizeHelmetEquipped = new System.Windows.Forms.PictureBox();
+            this.pb4_SpeedTuner = new System.Windows.Forms.PictureBox();
+            this.pb3_SpeedTuner = new System.Windows.Forms.PictureBox();
+            this.pb2_SpeedTuner = new System.Windows.Forms.PictureBox();
+            this.pb1_SpeedTuner = new System.Windows.Forms.PictureBox();
+            this.is_Weapon = new E7_Gear_Optimizer.ItemStats();
+            this.is_Helmet = new E7_Gear_Optimizer.ItemStats();
+            this.is_Armor = new E7_Gear_Optimizer.ItemStats();
+            this.is_Necklace = new E7_Gear_Optimizer.ItemStats();
+            this.is_Ring = new E7_Gear_Optimizer.ItemStats();
+            this.is_Boots = new E7_Gear_Optimizer.ItemStats();
+            this.is_NecklaceOptimize = new E7_Gear_Optimizer.ItemStats();
+            this.is_BootsOptimize = new E7_Gear_Optimizer.ItemStats();
+            this.is_RingOptimize = new E7_Gear_Optimizer.ItemStats();
+            this.is_ArmorOptimize = new E7_Gear_Optimizer.ItemStats();
+            this.is_HelmetOptimize = new E7_Gear_Optimizer.ItemStats();
+            this.is_WeaponOptimize = new E7_Gear_Optimizer.ItemStats();
             this.tb_Inventory.SuspendLayout();
             this.tc_InventorySets.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_ItemLocked)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Equipped)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Sub4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Sub3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Sub2)).BeginInit();
@@ -504,19 +518,16 @@
             this.tc_Heroes_Class.SuspendLayout();
             this.tc_Heroes_Element.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Heroes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Hero)).BeginInit();
             this.tb_Optimize.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeHeroPortrait)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_EnemyDef)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_LimitResults)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_EnhanceFocus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeBootsEquipped)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeRingEquipped)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeNecklaceEquipped)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeWeaponEquipped)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeArmorEquipped)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeHelmetEquipped)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_CritBonus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_OptimizeResults)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -526,18 +537,28 @@
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud4_SpeedTunerImprint)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb4_SpeedTuner)).BeginInit();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud3_SpeedTunerImprint)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3_SpeedTuner)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud2_SpeedTunerImprint)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2_SpeedTuner)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud1_SpeedTunerImprint)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ItemLocked)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Equipped)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Hero)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeHeroPortrait)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeBootsEquipped)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeRingEquipped)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeNecklaceEquipped)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeWeaponEquipped)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeArmorEquipped)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeHelmetEquipped)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4_SpeedTuner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3_SpeedTuner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2_SpeedTuner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1_SpeedTuner)).BeginInit();
             this.SuspendLayout();
             // 
@@ -546,13 +567,13 @@
             this.tb_Inventory.Controls.Add(this.l_ItemCount);
             this.tb_Inventory.Controls.Add(this.label27);
             this.tb_Inventory.Controls.Add(this.tc_InventorySets);
+            this.tb_Inventory.Controls.Add(this.cb_Eq);
+            this.tb_Inventory.Controls.Add(this.label8);
+            this.tb_Inventory.Controls.Add(this.nud_Sub4);
             this.tb_Inventory.Controls.Add(this.b_NewItemEquipped);
             this.tb_Inventory.Controls.Add(this.pb_ItemLocked);
             this.tb_Inventory.Controls.Add(this.b_RemoveItem);
             this.tb_Inventory.Controls.Add(this.pb_Equipped);
-            this.tb_Inventory.Controls.Add(this.cb_Eq);
-            this.tb_Inventory.Controls.Add(this.label8);
-            this.tb_Inventory.Controls.Add(this.nud_Sub4);
             this.tb_Inventory.Controls.Add(this.lb_Sub4);
             this.tb_Inventory.Controls.Add(this.nud_Sub3);
             this.tb_Inventory.Controls.Add(this.lb_Sub3);
@@ -621,6 +642,9 @@
             this.tc_InventorySets.Controls.Add(this.tabPage33);
             this.tc_InventorySets.Controls.Add(this.tabPage34);
             this.tc_InventorySets.Controls.Add(this.tabPage35);
+            this.tc_InventorySets.Controls.Add(this.tabPage36);
+            this.tc_InventorySets.Controls.Add(this.tabPage37);
+            this.tc_InventorySets.Controls.Add(this.tabPage38);
             this.tc_InventorySets.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tc_InventorySets.ImageList = this.Sets;
             this.tc_InventorySets.ItemSize = new System.Drawing.Size(28, 28);
@@ -629,7 +653,7 @@
             this.tc_InventorySets.Name = "tc_InventorySets";
             this.tc_InventorySets.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tc_InventorySets.SelectedIndex = 0;
-            this.tc_InventorySets.Size = new System.Drawing.Size(1004, 34);
+            this.tc_InventorySets.Size = new System.Drawing.Size(1148, 34);
             this.tc_InventorySets.TabIndex = 32;
             this.tc_InventorySets.SelectedIndexChanged += new System.EventHandler(this.tc_InventorySets_SelectedIndexChanged);
             // 
@@ -642,7 +666,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage3.Size = new System.Drawing.Size(996, 0);
+            this.tabPage3.Size = new System.Drawing.Size(1140, 0);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "All";
             // 
@@ -775,51 +799,6 @@
             this.Sets.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             this.Sets.ImageSize = new System.Drawing.Size(25, 25);
             this.Sets.TransparentColor = System.Drawing.Color.White;
-            // 
-            // b_NewItemEquipped
-            // 
-            this.b_NewItemEquipped.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.newEquipped;
-            this.b_NewItemEquipped.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.b_NewItemEquipped.Location = new System.Drawing.Point(1693, 602);
-            this.b_NewItemEquipped.Margin = new System.Windows.Forms.Padding(4);
-            this.b_NewItemEquipped.Name = "b_NewItemEquipped";
-            this.b_NewItemEquipped.Size = new System.Drawing.Size(69, 48);
-            this.b_NewItemEquipped.TabIndex = 31;
-            this.b_NewItemEquipped.UseVisualStyleBackColor = true;
-            this.b_NewItemEquipped.Click += new System.EventHandler(this.B_NewItemEquipped_Click);
-            // 
-            // pb_ItemLocked
-            // 
-            this.pb_ItemLocked.Location = new System.Drawing.Point(1427, 558);
-            this.pb_ItemLocked.Margin = new System.Windows.Forms.Padding(4);
-            this.pb_ItemLocked.Name = "pb_ItemLocked";
-            this.pb_ItemLocked.Size = new System.Drawing.Size(68, 62);
-            this.pb_ItemLocked.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_ItemLocked.TabIndex = 30;
-            this.pb_ItemLocked.TabStop = false;
-            this.pb_ItemLocked.Click += new System.EventHandler(this.Pb_ItemLocked_Click);
-            // 
-            // b_RemoveItem
-            // 
-            this.b_RemoveItem.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.remove;
-            this.b_RemoveItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.b_RemoveItem.Location = new System.Drawing.Point(1539, 546);
-            this.b_RemoveItem.Margin = new System.Windows.Forms.Padding(4);
-            this.b_RemoveItem.Name = "b_RemoveItem";
-            this.b_RemoveItem.Size = new System.Drawing.Size(69, 48);
-            this.b_RemoveItem.TabIndex = 29;
-            this.b_RemoveItem.UseVisualStyleBackColor = true;
-            this.b_RemoveItem.Click += new System.EventHandler(this.B_RemoveItem_Click);
-            // 
-            // pb_Equipped
-            // 
-            this.pb_Equipped.Location = new System.Drawing.Point(1244, 668);
-            this.pb_Equipped.Margin = new System.Windows.Forms.Padding(4);
-            this.pb_Equipped.Name = "pb_Equipped";
-            this.pb_Equipped.Size = new System.Drawing.Size(125, 116);
-            this.pb_Equipped.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_Equipped.TabIndex = 28;
-            this.pb_Equipped.TabStop = false;
             // 
             // cb_Eq
             // 
@@ -1259,85 +1238,6 @@
             this.p_Type.Size = new System.Drawing.Size(181, 204);
             this.p_Type.TabIndex = 7;
             // 
-            // rb_BootsType
-            // 
-            this.rb_BootsType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_BootsType.Image = global::E7_Gear_Optimizer.Properties.Resources.boots;
-            this.rb_BootsType.Location = new System.Drawing.Point(99, 153);
-            this.rb_BootsType.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_BootsType.Name = "rb_BootsType";
-            this.rb_BootsType.Size = new System.Drawing.Size(69, 52);
-            this.rb_BootsType.TabIndex = 13;
-            this.rb_BootsType.UseVisualStyleBackColor = true;
-            this.rb_BootsType.CheckedChanged += new System.EventHandler(this.Rb_BootsType_CheckedChanged);
-            // 
-            // rb_RingType
-            // 
-            this.rb_RingType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_RingType.Image = global::E7_Gear_Optimizer.Properties.Resources.ring;
-            this.rb_RingType.Location = new System.Drawing.Point(99, 94);
-            this.rb_RingType.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_RingType.Name = "rb_RingType";
-            this.rb_RingType.Size = new System.Drawing.Size(77, 52);
-            this.rb_RingType.TabIndex = 12;
-            this.rb_RingType.Text = "           ";
-            this.rb_RingType.UseVisualStyleBackColor = true;
-            this.rb_RingType.CheckedChanged += new System.EventHandler(this.Rb_RingType_CheckedChanged);
-            // 
-            // rb_NecklaceType
-            // 
-            this.rb_NecklaceType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_NecklaceType.Image = global::E7_Gear_Optimizer.Properties.Resources.necklace;
-            this.rb_NecklaceType.Location = new System.Drawing.Point(99, 33);
-            this.rb_NecklaceType.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_NecklaceType.Name = "rb_NecklaceType";
-            this.rb_NecklaceType.Size = new System.Drawing.Size(77, 52);
-            this.rb_NecklaceType.TabIndex = 11;
-            this.rb_NecklaceType.Text = "           ";
-            this.rb_NecklaceType.UseVisualStyleBackColor = true;
-            this.rb_NecklaceType.CheckedChanged += new System.EventHandler(this.Rb_NecklaceType_CheckedChanged);
-            // 
-            // rb_ArmorType
-            // 
-            this.rb_ArmorType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_ArmorType.Image = global::E7_Gear_Optimizer.Properties.Resources.armor;
-            this.rb_ArmorType.Location = new System.Drawing.Point(13, 153);
-            this.rb_ArmorType.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_ArmorType.Name = "rb_ArmorType";
-            this.rb_ArmorType.Size = new System.Drawing.Size(77, 52);
-            this.rb_ArmorType.TabIndex = 10;
-            this.rb_ArmorType.Text = "           ";
-            this.rb_ArmorType.UseVisualStyleBackColor = true;
-            this.rb_ArmorType.CheckedChanged += new System.EventHandler(this.Rb_ArmorType_CheckedChanged);
-            // 
-            // rb_HelmetType
-            // 
-            this.rb_HelmetType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_HelmetType.Image = global::E7_Gear_Optimizer.Properties.Resources.helmet;
-            this.rb_HelmetType.Location = new System.Drawing.Point(13, 94);
-            this.rb_HelmetType.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_HelmetType.Name = "rb_HelmetType";
-            this.rb_HelmetType.Size = new System.Drawing.Size(77, 52);
-            this.rb_HelmetType.TabIndex = 9;
-            this.rb_HelmetType.Text = "           ";
-            this.rb_HelmetType.UseVisualStyleBackColor = true;
-            this.rb_HelmetType.CheckedChanged += new System.EventHandler(this.Rb_HelmetType_CheckedChanged);
-            // 
-            // rb_WeaponType
-            // 
-            this.rb_WeaponType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_WeaponType.Checked = true;
-            this.rb_WeaponType.Image = ((System.Drawing.Image)(resources.GetObject("rb_WeaponType.Image")));
-            this.rb_WeaponType.Location = new System.Drawing.Point(13, 33);
-            this.rb_WeaponType.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_WeaponType.Name = "rb_WeaponType";
-            this.rb_WeaponType.Size = new System.Drawing.Size(77, 52);
-            this.rb_WeaponType.TabIndex = 8;
-            this.rb_WeaponType.TabStop = true;
-            this.rb_WeaponType.Text = "            ";
-            this.rb_WeaponType.UseVisualStyleBackColor = true;
-            this.rb_WeaponType.CheckedChanged += new System.EventHandler(this.Rb_WeaponType_CheckedChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -1351,6 +1251,9 @@
             // 
             // p_Set
             // 
+            this.p_Set.Controls.Add(this.rb_PenetrationSet);
+            this.p_Set.Controls.Add(this.rb_InjurySet);
+            this.p_Set.Controls.Add(this.rb_RevengeSet);
             this.p_Set.Controls.Add(this.rb_UnitySet);
             this.p_Set.Controls.Add(this.rb_ImmunitySet);
             this.p_Set.Controls.Add(this.rb_RageSet);
@@ -1368,167 +1271,8 @@
             this.p_Set.Location = new System.Drawing.Point(8, 545);
             this.p_Set.Margin = new System.Windows.Forms.Padding(4);
             this.p_Set.Name = "p_Set";
-            this.p_Set.Size = new System.Drawing.Size(431, 204);
+            this.p_Set.Size = new System.Drawing.Size(431, 260);
             this.p_Set.TabIndex = 6;
-            // 
-            // rb_UnitySet
-            // 
-            this.rb_UnitySet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_UnitySet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_unity;
-            this.rb_UnitySet.Location = new System.Drawing.Point(171, 146);
-            this.rb_UnitySet.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_UnitySet.Name = "rb_UnitySet";
-            this.rb_UnitySet.Size = new System.Drawing.Size(77, 52);
-            this.rb_UnitySet.TabIndex = 18;
-            this.rb_UnitySet.Text = "           ";
-            this.rb_UnitySet.UseVisualStyleBackColor = true;
-            // 
-            // rb_ImmunitySet
-            // 
-            this.rb_ImmunitySet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_ImmunitySet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_immunity;
-            this.rb_ImmunitySet.Location = new System.Drawing.Point(256, 146);
-            this.rb_ImmunitySet.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_ImmunitySet.Name = "rb_ImmunitySet";
-            this.rb_ImmunitySet.Size = new System.Drawing.Size(77, 52);
-            this.rb_ImmunitySet.TabIndex = 17;
-            this.rb_ImmunitySet.Text = "           ";
-            this.rb_ImmunitySet.UseVisualStyleBackColor = true;
-            // 
-            // rb_RageSet
-            // 
-            this.rb_RageSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_RageSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_rage;
-            this.rb_RageSet.Location = new System.Drawing.Point(85, 146);
-            this.rb_RageSet.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_RageSet.Name = "rb_RageSet";
-            this.rb_RageSet.Size = new System.Drawing.Size(77, 52);
-            this.rb_RageSet.TabIndex = 16;
-            this.rb_RageSet.Text = "           ";
-            this.rb_RageSet.UseVisualStyleBackColor = true;
-            // 
-            // rb_ResistSet
-            // 
-            this.rb_ResistSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_ResistSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_resist;
-            this.rb_ResistSet.Location = new System.Drawing.Point(5, 146);
-            this.rb_ResistSet.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_ResistSet.Name = "rb_ResistSet";
-            this.rb_ResistSet.Size = new System.Drawing.Size(77, 52);
-            this.rb_ResistSet.TabIndex = 15;
-            this.rb_ResistSet.Text = "           ";
-            this.rb_ResistSet.UseVisualStyleBackColor = true;
-            // 
-            // rb_DestructionSet
-            // 
-            this.rb_DestructionSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_DestructionSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_destruction;
-            this.rb_DestructionSet.Location = new System.Drawing.Point(341, 87);
-            this.rb_DestructionSet.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_DestructionSet.Name = "rb_DestructionSet";
-            this.rb_DestructionSet.Size = new System.Drawing.Size(77, 52);
-            this.rb_DestructionSet.TabIndex = 14;
-            this.rb_DestructionSet.Text = "           ";
-            this.rb_DestructionSet.UseVisualStyleBackColor = true;
-            // 
-            // rb_LifestealSet
-            // 
-            this.rb_LifestealSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_LifestealSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_lifesteal;
-            this.rb_LifestealSet.Location = new System.Drawing.Point(256, 87);
-            this.rb_LifestealSet.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_LifestealSet.Name = "rb_LifestealSet";
-            this.rb_LifestealSet.Size = new System.Drawing.Size(77, 52);
-            this.rb_LifestealSet.TabIndex = 13;
-            this.rb_LifestealSet.Text = "           ";
-            this.rb_LifestealSet.UseVisualStyleBackColor = true;
-            // 
-            // rb_CounterSet
-            // 
-            this.rb_CounterSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_CounterSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_counter;
-            this.rb_CounterSet.Location = new System.Drawing.Point(171, 87);
-            this.rb_CounterSet.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_CounterSet.Name = "rb_CounterSet";
-            this.rb_CounterSet.Size = new System.Drawing.Size(77, 52);
-            this.rb_CounterSet.TabIndex = 12;
-            this.rb_CounterSet.Text = "           ";
-            this.rb_CounterSet.UseVisualStyleBackColor = true;
-            // 
-            // rb_AttackSet
-            // 
-            this.rb_AttackSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_AttackSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_attack;
-            this.rb_AttackSet.Location = new System.Drawing.Point(85, 87);
-            this.rb_AttackSet.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_AttackSet.Name = "rb_AttackSet";
-            this.rb_AttackSet.Size = new System.Drawing.Size(77, 52);
-            this.rb_AttackSet.TabIndex = 11;
-            this.rb_AttackSet.Text = "           ";
-            this.rb_AttackSet.UseVisualStyleBackColor = true;
-            // 
-            // rb_HealthSet
-            // 
-            this.rb_HealthSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_HealthSet.Cursor = System.Windows.Forms.Cursors.Default;
-            this.rb_HealthSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_health;
-            this.rb_HealthSet.Location = new System.Drawing.Point(5, 87);
-            this.rb_HealthSet.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_HealthSet.Name = "rb_HealthSet";
-            this.rb_HealthSet.Size = new System.Drawing.Size(77, 52);
-            this.rb_HealthSet.TabIndex = 10;
-            this.rb_HealthSet.Text = "           ";
-            this.rb_HealthSet.UseVisualStyleBackColor = true;
-            // 
-            // rb_DefSet
-            // 
-            this.rb_DefSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_DefSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_defense;
-            this.rb_DefSet.Location = new System.Drawing.Point(256, 33);
-            this.rb_DefSet.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_DefSet.Name = "rb_DefSet";
-            this.rb_DefSet.Size = new System.Drawing.Size(77, 52);
-            this.rb_DefSet.TabIndex = 9;
-            this.rb_DefSet.Text = "           ";
-            this.rb_DefSet.UseVisualStyleBackColor = true;
-            // 
-            // rb_CritSet
-            // 
-            this.rb_CritSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_CritSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_crit;
-            this.rb_CritSet.Location = new System.Drawing.Point(171, 33);
-            this.rb_CritSet.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_CritSet.Name = "rb_CritSet";
-            this.rb_CritSet.Size = new System.Drawing.Size(77, 52);
-            this.rb_CritSet.TabIndex = 8;
-            this.rb_CritSet.Text = "           ";
-            this.rb_CritSet.UseVisualStyleBackColor = true;
-            // 
-            // rb_HitSet
-            // 
-            this.rb_HitSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_HitSet.Image = ((System.Drawing.Image)(resources.GetObject("rb_HitSet.Image")));
-            this.rb_HitSet.Location = new System.Drawing.Point(85, 33);
-            this.rb_HitSet.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_HitSet.Name = "rb_HitSet";
-            this.rb_HitSet.Size = new System.Drawing.Size(77, 52);
-            this.rb_HitSet.TabIndex = 7;
-            this.rb_HitSet.Text = "           ";
-            this.rb_HitSet.UseVisualStyleBackColor = true;
-            // 
-            // rb_SpeedSet
-            // 
-            this.rb_SpeedSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rb_SpeedSet.Checked = true;
-            this.rb_SpeedSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_speed;
-            this.rb_SpeedSet.Location = new System.Drawing.Point(5, 33);
-            this.rb_SpeedSet.Margin = new System.Windows.Forms.Padding(4);
-            this.rb_SpeedSet.Name = "rb_SpeedSet";
-            this.rb_SpeedSet.Size = new System.Drawing.Size(81, 53);
-            this.rb_SpeedSet.TabIndex = 6;
-            this.rb_SpeedSet.TabStop = true;
-            this.rb_SpeedSet.Text = "            ";
-            this.rb_SpeedSet.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -1915,30 +1659,6 @@
             this.Types.Images.SetKeyName(3, "necklace.png");
             this.Types.Images.SetKeyName(4, "ring.png");
             this.Types.Images.SetKeyName(5, "boots.png");
-            // 
-            // b_EditItem
-            // 
-            this.b_EditItem.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
-            this.b_EditItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.b_EditItem.Location = new System.Drawing.Point(1616, 546);
-            this.b_EditItem.Margin = new System.Windows.Forms.Padding(4);
-            this.b_EditItem.Name = "b_EditItem";
-            this.b_EditItem.Size = new System.Drawing.Size(69, 48);
-            this.b_EditItem.TabIndex = 3;
-            this.b_EditItem.UseVisualStyleBackColor = true;
-            this.b_EditItem.Click += new System.EventHandler(this.B_EditItem_Click);
-            // 
-            // b_NewItem
-            // 
-            this.b_NewItem.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources._new;
-            this.b_NewItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.b_NewItem.Location = new System.Drawing.Point(1693, 546);
-            this.b_NewItem.Margin = new System.Windows.Forms.Padding(4);
-            this.b_NewItem.Name = "b_NewItem";
-            this.b_NewItem.Size = new System.Drawing.Size(69, 48);
-            this.b_NewItem.TabIndex = 2;
-            this.b_NewItem.UseVisualStyleBackColor = true;
-            this.b_NewItem.Click += new System.EventHandler(this.B_NewItem_Click);
             // 
             // tabPage1
             // 
@@ -2998,193 +2718,18 @@
             this.c_HeroID.Name = "c_HeroID";
             this.c_HeroID.ReadOnly = true;
             // 
-            // b_EditBoots
-            // 
-            this.b_EditBoots.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
-            this.b_EditBoots.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.b_EditBoots.Location = new System.Drawing.Point(1598, 815);
-            this.b_EditBoots.Margin = new System.Windows.Forms.Padding(4);
-            this.b_EditBoots.Name = "b_EditBoots";
-            this.b_EditBoots.Size = new System.Drawing.Size(55, 36);
-            this.b_EditBoots.TabIndex = 96;
-            this.b_EditBoots.UseVisualStyleBackColor = true;
-            this.b_EditBoots.Click += new System.EventHandler(this.B_EditBoots_Click);
-            // 
-            // b_EditRing
-            // 
-            this.b_EditRing.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
-            this.b_EditRing.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.b_EditRing.Location = new System.Drawing.Point(1338, 815);
-            this.b_EditRing.Margin = new System.Windows.Forms.Padding(4);
-            this.b_EditRing.Name = "b_EditRing";
-            this.b_EditRing.Size = new System.Drawing.Size(55, 36);
-            this.b_EditRing.TabIndex = 94;
-            this.b_EditRing.UseVisualStyleBackColor = true;
-            this.b_EditRing.Click += new System.EventHandler(this.B_EditRing_Click);
-            // 
-            // b_EditNecklace
-            // 
-            this.b_EditNecklace.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
-            this.b_EditNecklace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.b_EditNecklace.Location = new System.Drawing.Point(1078, 815);
-            this.b_EditNecklace.Margin = new System.Windows.Forms.Padding(4);
-            this.b_EditNecklace.Name = "b_EditNecklace";
-            this.b_EditNecklace.Size = new System.Drawing.Size(55, 36);
-            this.b_EditNecklace.TabIndex = 92;
-            this.b_EditNecklace.UseVisualStyleBackColor = true;
-            this.b_EditNecklace.Click += new System.EventHandler(this.B_EditNecklace_Click);
-            // 
-            // b_EditArmor
-            // 
-            this.b_EditArmor.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
-            this.b_EditArmor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.b_EditArmor.Location = new System.Drawing.Point(818, 815);
-            this.b_EditArmor.Margin = new System.Windows.Forms.Padding(4);
-            this.b_EditArmor.Name = "b_EditArmor";
-            this.b_EditArmor.Size = new System.Drawing.Size(55, 36);
-            this.b_EditArmor.TabIndex = 90;
-            this.b_EditArmor.UseVisualStyleBackColor = true;
-            this.b_EditArmor.Click += new System.EventHandler(this.B_EditArmor_Click);
-            // 
-            // b_EditHelmet
-            // 
-            this.b_EditHelmet.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
-            this.b_EditHelmet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.b_EditHelmet.Location = new System.Drawing.Point(558, 815);
-            this.b_EditHelmet.Margin = new System.Windows.Forms.Padding(4);
-            this.b_EditHelmet.Name = "b_EditHelmet";
-            this.b_EditHelmet.Size = new System.Drawing.Size(55, 36);
-            this.b_EditHelmet.TabIndex = 88;
-            this.b_EditHelmet.UseVisualStyleBackColor = true;
-            this.b_EditHelmet.Click += new System.EventHandler(this.B_EditHelmet_Click);
-            // 
-            // b_EditWeapon
-            // 
-            this.b_EditWeapon.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
-            this.b_EditWeapon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.b_EditWeapon.Location = new System.Drawing.Point(293, 815);
-            this.b_EditWeapon.Margin = new System.Windows.Forms.Padding(4);
-            this.b_EditWeapon.Name = "b_EditWeapon";
-            this.b_EditWeapon.Size = new System.Drawing.Size(55, 36);
-            this.b_EditWeapon.TabIndex = 86;
-            this.b_EditWeapon.UseVisualStyleBackColor = true;
-            this.b_EditWeapon.Click += new System.EventHandler(this.B_WeaponEdit_Click);
-            // 
-            // pb_Hero
-            // 
-            this.pb_Hero.Location = new System.Drawing.Point(9, 465);
-            this.pb_Hero.Margin = new System.Windows.Forms.Padding(4);
-            this.pb_Hero.Name = "pb_Hero";
-            this.pb_Hero.Size = new System.Drawing.Size(101, 94);
-            this.pb_Hero.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_Hero.TabIndex = 76;
-            this.pb_Hero.TabStop = false;
-            // 
-            // b_RemoveHero
-            // 
-            this.b_RemoveHero.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.remove;
-            this.b_RemoveHero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.b_RemoveHero.Location = new System.Drawing.Point(1543, 462);
-            this.b_RemoveHero.Margin = new System.Windows.Forms.Padding(4);
-            this.b_RemoveHero.Name = "b_RemoveHero";
-            this.b_RemoveHero.Size = new System.Drawing.Size(69, 48);
-            this.b_RemoveHero.TabIndex = 32;
-            this.b_RemoveHero.UseVisualStyleBackColor = true;
-            this.b_RemoveHero.Click += new System.EventHandler(this.B_RemoveHero_Click);
-            // 
-            // b_EditHero
-            // 
-            this.b_EditHero.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
-            this.b_EditHero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.b_EditHero.Location = new System.Drawing.Point(1620, 462);
-            this.b_EditHero.Margin = new System.Windows.Forms.Padding(4);
-            this.b_EditHero.Name = "b_EditHero";
-            this.b_EditHero.Size = new System.Drawing.Size(69, 48);
-            this.b_EditHero.TabIndex = 31;
-            this.b_EditHero.UseVisualStyleBackColor = true;
-            this.b_EditHero.Click += new System.EventHandler(this.B_EditHero_Click);
-            // 
-            // b_AddHero
-            // 
-            this.b_AddHero.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources._new;
-            this.b_AddHero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.b_AddHero.Location = new System.Drawing.Point(1697, 462);
-            this.b_AddHero.Margin = new System.Windows.Forms.Padding(4);
-            this.b_AddHero.Name = "b_AddHero";
-            this.b_AddHero.Size = new System.Drawing.Size(69, 48);
-            this.b_AddHero.TabIndex = 30;
-            this.b_AddHero.UseVisualStyleBackColor = true;
-            this.b_AddHero.Click += new System.EventHandler(this.B_AddHero_Click);
-            // 
-            // is_Weapon
-            // 
-            this.is_Weapon.Hero = null;
-            this.is_Weapon.Image = null;
-            this.is_Weapon.Item = null;
-            this.is_Weapon.Location = new System.Drawing.Point(107, 555);
-            this.is_Weapon.Margin = new System.Windows.Forms.Padding(5);
-            this.is_Weapon.Name = "is_Weapon";
-            this.is_Weapon.Size = new System.Drawing.Size(241, 258);
-            this.is_Weapon.TabIndex = 118;
-            // 
-            // is_Helmet
-            // 
-            this.is_Helmet.Hero = null;
-            this.is_Helmet.Image = null;
-            this.is_Helmet.Item = null;
-            this.is_Helmet.Location = new System.Drawing.Point(372, 555);
-            this.is_Helmet.Margin = new System.Windows.Forms.Padding(5);
-            this.is_Helmet.Name = "is_Helmet";
-            this.is_Helmet.Size = new System.Drawing.Size(241, 258);
-            this.is_Helmet.TabIndex = 117;
-            // 
-            // is_Armor
-            // 
-            this.is_Armor.Hero = null;
-            this.is_Armor.Image = null;
-            this.is_Armor.Item = null;
-            this.is_Armor.Location = new System.Drawing.Point(632, 555);
-            this.is_Armor.Margin = new System.Windows.Forms.Padding(5);
-            this.is_Armor.Name = "is_Armor";
-            this.is_Armor.Size = new System.Drawing.Size(241, 258);
-            this.is_Armor.TabIndex = 116;
-            // 
-            // is_Necklace
-            // 
-            this.is_Necklace.Hero = null;
-            this.is_Necklace.Image = null;
-            this.is_Necklace.Item = null;
-            this.is_Necklace.Location = new System.Drawing.Point(892, 555);
-            this.is_Necklace.Margin = new System.Windows.Forms.Padding(5);
-            this.is_Necklace.Name = "is_Necklace";
-            this.is_Necklace.Size = new System.Drawing.Size(241, 258);
-            this.is_Necklace.TabIndex = 115;
-            // 
-            // is_Ring
-            // 
-            this.is_Ring.Hero = null;
-            this.is_Ring.Image = null;
-            this.is_Ring.Item = null;
-            this.is_Ring.Location = new System.Drawing.Point(1152, 555);
-            this.is_Ring.Margin = new System.Windows.Forms.Padding(5);
-            this.is_Ring.Name = "is_Ring";
-            this.is_Ring.Size = new System.Drawing.Size(241, 258);
-            this.is_Ring.TabIndex = 114;
-            // 
-            // is_Boots
-            // 
-            this.is_Boots.Hero = null;
-            this.is_Boots.Image = null;
-            this.is_Boots.Item = null;
-            this.is_Boots.Location = new System.Drawing.Point(1412, 555);
-            this.is_Boots.Margin = new System.Windows.Forms.Padding(5);
-            this.is_Boots.Name = "is_Boots";
-            this.is_Boots.Size = new System.Drawing.Size(241, 258);
-            this.is_Boots.TabIndex = 113;
-            // 
             // tb_Optimize
             // 
-            this.tb_Optimize.Controls.Add(this.pb_OptimizeHeroPortrait);
+            this.tb_Optimize.Controls.Add(this.numericUpDown5);
+            this.tb_Optimize.Controls.Add(this.label60);
+            this.tb_Optimize.Controls.Add(this.label59);
+            this.tb_Optimize.Controls.Add(this.label55);
+            this.tb_Optimize.Controls.Add(this.label50);
+            this.tb_Optimize.Controls.Add(this.numericUpDown4);
+            this.tb_Optimize.Controls.Add(this.numericUpDown3);
+            this.tb_Optimize.Controls.Add(this.numericUpDown2);
+            this.tb_Optimize.Controls.Add(this.numericUpDown1);
+            this.tb_Optimize.Controls.Add(this.checkBox1);
             this.tb_Optimize.Controls.Add(this.b_EquipLockOptimize);
             this.tb_Optimize.Controls.Add(this.chb_hideEquippedHeroes);
             this.tb_Optimize.Controls.Add(this.b_EquipUnlockOptimize);
@@ -3195,12 +2740,6 @@
             this.tb_Optimize.Controls.Add(this.panel1);
             this.tb_Optimize.Controls.Add(this.b_CancelOptimize);
             this.tb_Optimize.Controls.Add(this.b_FilterResults);
-            this.tb_Optimize.Controls.Add(this.pb_OptimizeBootsEquipped);
-            this.tb_Optimize.Controls.Add(this.pb_OptimizeRingEquipped);
-            this.tb_Optimize.Controls.Add(this.pb_OptimizeNecklaceEquipped);
-            this.tb_Optimize.Controls.Add(this.pb_OptimizeWeaponEquipped);
-            this.tb_Optimize.Controls.Add(this.pb_OptimizeArmorEquipped);
-            this.tb_Optimize.Controls.Add(this.pb_OptimizeHelmetEquipped);
             this.tb_Optimize.Controls.Add(this.cb_keepEquip);
             this.tb_Optimize.Controls.Add(this.label49);
             this.tb_Optimize.Controls.Add(this.nud_CritBonus);
@@ -3222,6 +2761,13 @@
             this.tb_Optimize.Controls.Add(this.tableLayoutPanel1);
             this.tb_Optimize.Controls.Add(this.label18);
             this.tb_Optimize.Controls.Add(this.cb_OptimizeHero);
+            this.tb_Optimize.Controls.Add(this.pb_OptimizeHeroPortrait);
+            this.tb_Optimize.Controls.Add(this.pb_OptimizeBootsEquipped);
+            this.tb_Optimize.Controls.Add(this.pb_OptimizeRingEquipped);
+            this.tb_Optimize.Controls.Add(this.pb_OptimizeNecklaceEquipped);
+            this.tb_Optimize.Controls.Add(this.pb_OptimizeWeaponEquipped);
+            this.tb_Optimize.Controls.Add(this.pb_OptimizeArmorEquipped);
+            this.tb_Optimize.Controls.Add(this.pb_OptimizeHelmetEquipped);
             this.tb_Optimize.Controls.Add(this.is_NecklaceOptimize);
             this.tb_Optimize.Controls.Add(this.is_BootsOptimize);
             this.tb_Optimize.Controls.Add(this.is_RingOptimize);
@@ -3237,14 +2783,97 @@
             this.tb_Optimize.UseVisualStyleBackColor = true;
             this.tb_Optimize.TextChanged += new System.EventHandler(this.Tb_Optimize_TextChanged);
             // 
-            // pb_OptimizeHeroPortrait
+            // numericUpDown5
             // 
-            this.pb_OptimizeHeroPortrait.Location = new System.Drawing.Point(4, 3);
-            this.pb_OptimizeHeroPortrait.Name = "pb_OptimizeHeroPortrait";
-            this.pb_OptimizeHeroPortrait.Size = new System.Drawing.Size(90, 90);
-            this.pb_OptimizeHeroPortrait.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_OptimizeHeroPortrait.TabIndex = 153;
-            this.pb_OptimizeHeroPortrait.TabStop = false;
+            this.numericUpDown5.Location = new System.Drawing.Point(443, 114);
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(101, 22);
+            this.numericUpDown5.TabIndex = 163;
+            this.numericUpDown5.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown5.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(443, 94);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(120, 17);
+            this.label60.TabIndex = 162;
+            this.label60.Text = "ATK% to Damage";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(443, 248);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(108, 17);
+            this.label59.TabIndex = 161;
+            this.label59.Text = "SPD% Multiplier";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(443, 194);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(120, 17);
+            this.label55.TabIndex = 160;
+            this.label55.Text = "DEF% to Damage";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(443, 140);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(112, 17);
+            this.label50.TabIndex = 159;
+            this.label50.Text = "HP% to Damage";
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(443, 268);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(101, 22);
+            this.numericUpDown4.TabIndex = 158;
+            this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(443, 214);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(101, 22);
+            this.numericUpDown3.TabIndex = 157;
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(446, 160);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(98, 22);
+            this.numericUpDown2.TabIndex = 156;
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(446, 52);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(98, 22);
+            this.numericUpDown1.TabIndex = 155;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(446, 25);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(127, 21);
+            this.checkBox1.TabIndex = 154;
+            this.checkBox1.Text = "Force Min WSS";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // b_EquipLockOptimize
             // 
@@ -3571,7 +3200,10 @@
             "Resist",
             "Rage",
             "Immunity",
-            "Unity"});
+            "Unity",
+            "Revenge",
+            "Injury",
+            "Penetration"});
             this.cb_Set1.Location = new System.Drawing.Point(81, 153);
             this.cb_Set1.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Set1.Name = "cb_Set1";
@@ -3595,7 +3227,10 @@
             "Resist",
             "Rage",
             "Immunity",
-            "Unity"});
+            "Unity",
+            "Revenge",
+            "Injury",
+            "Penetration"});
             this.cb_Set2.Location = new System.Drawing.Point(81, 185);
             this.cb_Set2.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Set2.Name = "cb_Set2";
@@ -3619,7 +3254,10 @@
             "Resist",
             "Rage",
             "Immunity",
-            "Unity"});
+            "Unity",
+            "Revenge",
+            "Injury",
+            "Penetration"});
             this.cb_Set3.Location = new System.Drawing.Point(81, 218);
             this.cb_Set3.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Set3.Name = "cb_Set3";
@@ -3680,66 +3318,6 @@
             this.b_FilterResults.Text = "Filter current results";
             this.b_FilterResults.UseVisualStyleBackColor = true;
             this.b_FilterResults.Click += new System.EventHandler(this.B_FilterResults_Click);
-            // 
-            // pb_OptimizeBootsEquipped
-            // 
-            this.pb_OptimizeBootsEquipped.Location = new System.Drawing.Point(1579, 641);
-            this.pb_OptimizeBootsEquipped.Margin = new System.Windows.Forms.Padding(4);
-            this.pb_OptimizeBootsEquipped.Name = "pb_OptimizeBootsEquipped";
-            this.pb_OptimizeBootsEquipped.Size = new System.Drawing.Size(93, 86);
-            this.pb_OptimizeBootsEquipped.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_OptimizeBootsEquipped.TabIndex = 135;
-            this.pb_OptimizeBootsEquipped.TabStop = false;
-            // 
-            // pb_OptimizeRingEquipped
-            // 
-            this.pb_OptimizeRingEquipped.Location = new System.Drawing.Point(1579, 319);
-            this.pb_OptimizeRingEquipped.Margin = new System.Windows.Forms.Padding(4);
-            this.pb_OptimizeRingEquipped.Name = "pb_OptimizeRingEquipped";
-            this.pb_OptimizeRingEquipped.Size = new System.Drawing.Size(93, 86);
-            this.pb_OptimizeRingEquipped.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_OptimizeRingEquipped.TabIndex = 134;
-            this.pb_OptimizeRingEquipped.TabStop = false;
-            // 
-            // pb_OptimizeNecklaceEquipped
-            // 
-            this.pb_OptimizeNecklaceEquipped.Location = new System.Drawing.Point(1579, 0);
-            this.pb_OptimizeNecklaceEquipped.Margin = new System.Windows.Forms.Padding(4);
-            this.pb_OptimizeNecklaceEquipped.Name = "pb_OptimizeNecklaceEquipped";
-            this.pb_OptimizeNecklaceEquipped.Size = new System.Drawing.Size(93, 86);
-            this.pb_OptimizeNecklaceEquipped.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_OptimizeNecklaceEquipped.TabIndex = 133;
-            this.pb_OptimizeNecklaceEquipped.TabStop = false;
-            // 
-            // pb_OptimizeWeaponEquipped
-            // 
-            this.pb_OptimizeWeaponEquipped.Location = new System.Drawing.Point(1231, 0);
-            this.pb_OptimizeWeaponEquipped.Margin = new System.Windows.Forms.Padding(4);
-            this.pb_OptimizeWeaponEquipped.Name = "pb_OptimizeWeaponEquipped";
-            this.pb_OptimizeWeaponEquipped.Size = new System.Drawing.Size(93, 86);
-            this.pb_OptimizeWeaponEquipped.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_OptimizeWeaponEquipped.TabIndex = 132;
-            this.pb_OptimizeWeaponEquipped.TabStop = false;
-            // 
-            // pb_OptimizeArmorEquipped
-            // 
-            this.pb_OptimizeArmorEquipped.Location = new System.Drawing.Point(1231, 641);
-            this.pb_OptimizeArmorEquipped.Margin = new System.Windows.Forms.Padding(4);
-            this.pb_OptimizeArmorEquipped.Name = "pb_OptimizeArmorEquipped";
-            this.pb_OptimizeArmorEquipped.Size = new System.Drawing.Size(93, 86);
-            this.pb_OptimizeArmorEquipped.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_OptimizeArmorEquipped.TabIndex = 131;
-            this.pb_OptimizeArmorEquipped.TabStop = false;
-            // 
-            // pb_OptimizeHelmetEquipped
-            // 
-            this.pb_OptimizeHelmetEquipped.Location = new System.Drawing.Point(1231, 319);
-            this.pb_OptimizeHelmetEquipped.Margin = new System.Windows.Forms.Padding(4);
-            this.pb_OptimizeHelmetEquipped.Name = "pb_OptimizeHelmetEquipped";
-            this.pb_OptimizeHelmetEquipped.Size = new System.Drawing.Size(93, 86);
-            this.pb_OptimizeHelmetEquipped.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_OptimizeHelmetEquipped.TabIndex = 130;
-            this.pb_OptimizeHelmetEquipped.TabStop = false;
             // 
             // cb_keepEquip
             // 
@@ -4930,95 +4508,29 @@
             this.cb_OptimizeHero.TabIndex = 0;
             this.cb_OptimizeHero.SelectedIndexChanged += new System.EventHandler(this.Cb_OptimizeHero_SelectedIndexChanged);
             // 
-            // is_NecklaceOptimize
-            // 
-            this.is_NecklaceOptimize.Hero = null;
-            this.is_NecklaceOptimize.Image = null;
-            this.is_NecklaceOptimize.Item = null;
-            this.is_NecklaceOptimize.Location = new System.Drawing.Point(1677, 1);
-            this.is_NecklaceOptimize.Margin = new System.Windows.Forms.Padding(5);
-            this.is_NecklaceOptimize.Name = "is_NecklaceOptimize";
-            this.is_NecklaceOptimize.Size = new System.Drawing.Size(241, 258);
-            this.is_NecklaceOptimize.TabIndex = 146;
-            // 
-            // is_BootsOptimize
-            // 
-            this.is_BootsOptimize.Hero = null;
-            this.is_BootsOptimize.Image = null;
-            this.is_BootsOptimize.Item = null;
-            this.is_BootsOptimize.Location = new System.Drawing.Point(1677, 641);
-            this.is_BootsOptimize.Margin = new System.Windows.Forms.Padding(5);
-            this.is_BootsOptimize.Name = "is_BootsOptimize";
-            this.is_BootsOptimize.Size = new System.Drawing.Size(241, 258);
-            this.is_BootsOptimize.TabIndex = 117;
-            // 
-            // is_RingOptimize
-            // 
-            this.is_RingOptimize.Hero = null;
-            this.is_RingOptimize.Image = null;
-            this.is_RingOptimize.Item = null;
-            this.is_RingOptimize.Location = new System.Drawing.Point(1677, 318);
-            this.is_RingOptimize.Margin = new System.Windows.Forms.Padding(5);
-            this.is_RingOptimize.Name = "is_RingOptimize";
-            this.is_RingOptimize.Size = new System.Drawing.Size(241, 258);
-            this.is_RingOptimize.TabIndex = 145;
-            // 
-            // is_ArmorOptimize
-            // 
-            this.is_ArmorOptimize.Hero = null;
-            this.is_ArmorOptimize.Image = null;
-            this.is_ArmorOptimize.Item = null;
-            this.is_ArmorOptimize.Location = new System.Drawing.Point(1329, 641);
-            this.is_ArmorOptimize.Margin = new System.Windows.Forms.Padding(5);
-            this.is_ArmorOptimize.Name = "is_ArmorOptimize";
-            this.is_ArmorOptimize.Size = new System.Drawing.Size(241, 258);
-            this.is_ArmorOptimize.TabIndex = 144;
-            // 
-            // is_HelmetOptimize
-            // 
-            this.is_HelmetOptimize.Hero = null;
-            this.is_HelmetOptimize.Image = null;
-            this.is_HelmetOptimize.Item = null;
-            this.is_HelmetOptimize.Location = new System.Drawing.Point(1329, 319);
-            this.is_HelmetOptimize.Margin = new System.Windows.Forms.Padding(5);
-            this.is_HelmetOptimize.Name = "is_HelmetOptimize";
-            this.is_HelmetOptimize.Size = new System.Drawing.Size(241, 258);
-            this.is_HelmetOptimize.TabIndex = 143;
-            // 
-            // is_WeaponOptimize
-            // 
-            this.is_WeaponOptimize.Hero = null;
-            this.is_WeaponOptimize.Image = null;
-            this.is_WeaponOptimize.Item = null;
-            this.is_WeaponOptimize.Location = new System.Drawing.Point(1329, 1);
-            this.is_WeaponOptimize.Margin = new System.Windows.Forms.Padding(5);
-            this.is_WeaponOptimize.Name = "is_WeaponOptimize";
-            this.is_WeaponOptimize.Size = new System.Drawing.Size(241, 258);
-            this.is_WeaponOptimize.TabIndex = 142;
-            // 
             // tb_SpeedTuner
             // 
             this.tb_SpeedTuner.Controls.Add(this.richTextBox2);
             this.tb_SpeedTuner.Controls.Add(this.tableLayoutPanel8);
             this.tb_SpeedTuner.Controls.Add(this.tableLayoutPanel9);
-            this.tb_SpeedTuner.Controls.Add(this.pb4_SpeedTuner);
             this.tb_SpeedTuner.Controls.Add(this.cb4_SpeedTuner);
             this.tb_SpeedTuner.Controls.Add(this.label101);
             this.tb_SpeedTuner.Controls.Add(this.tableLayoutPanel6);
             this.tb_SpeedTuner.Controls.Add(this.tableLayoutPanel7);
-            this.tb_SpeedTuner.Controls.Add(this.pb3_SpeedTuner);
             this.tb_SpeedTuner.Controls.Add(this.cb3_SpeedTuner);
             this.tb_SpeedTuner.Controls.Add(this.label94);
             this.tb_SpeedTuner.Controls.Add(this.tableLayoutPanel4);
             this.tb_SpeedTuner.Controls.Add(this.tableLayoutPanel5);
-            this.tb_SpeedTuner.Controls.Add(this.pb2_SpeedTuner);
             this.tb_SpeedTuner.Controls.Add(this.cb2_SpeedTuner);
             this.tb_SpeedTuner.Controls.Add(this.label87);
             this.tb_SpeedTuner.Controls.Add(this.tableLayoutPanel3);
             this.tb_SpeedTuner.Controls.Add(this.tableLayoutPanel2);
-            this.tb_SpeedTuner.Controls.Add(this.pb1_SpeedTuner);
             this.tb_SpeedTuner.Controls.Add(this.cb1_SpeedTuner);
             this.tb_SpeedTuner.Controls.Add(this.label53);
+            this.tb_SpeedTuner.Controls.Add(this.pb4_SpeedTuner);
+            this.tb_SpeedTuner.Controls.Add(this.pb3_SpeedTuner);
+            this.tb_SpeedTuner.Controls.Add(this.pb2_SpeedTuner);
+            this.tb_SpeedTuner.Controls.Add(this.pb1_SpeedTuner);
             this.tb_SpeedTuner.Location = new System.Drawing.Point(4, 28);
             this.tb_SpeedTuner.Margin = new System.Windows.Forms.Padding(4);
             this.tb_SpeedTuner.Name = "tb_SpeedTuner";
@@ -5215,16 +4727,6 @@
             this.label100.TabIndex = 0;
             this.label100.Text = "SPD (Gear)";
             this.label100.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pb4_SpeedTuner
-            // 
-            this.pb4_SpeedTuner.Location = new System.Drawing.Point(61, 507);
-            this.pb4_SpeedTuner.Margin = new System.Windows.Forms.Padding(4);
-            this.pb4_SpeedTuner.Name = "pb4_SpeedTuner";
-            this.pb4_SpeedTuner.Size = new System.Drawing.Size(65, 62);
-            this.pb4_SpeedTuner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb4_SpeedTuner.TabIndex = 17;
-            this.pb4_SpeedTuner.TabStop = false;
             // 
             // cb4_SpeedTuner
             // 
@@ -5423,16 +4925,6 @@
             this.label92.TabIndex = 0;
             this.label92.Text = "SPD (Gear)";
             this.label92.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pb3_SpeedTuner
-            // 
-            this.pb3_SpeedTuner.Location = new System.Drawing.Point(61, 368);
-            this.pb3_SpeedTuner.Margin = new System.Windows.Forms.Padding(4);
-            this.pb3_SpeedTuner.Name = "pb3_SpeedTuner";
-            this.pb3_SpeedTuner.Size = new System.Drawing.Size(65, 62);
-            this.pb3_SpeedTuner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb3_SpeedTuner.TabIndex = 12;
-            this.pb3_SpeedTuner.TabStop = false;
             // 
             // cb3_SpeedTuner
             // 
@@ -5633,16 +5125,6 @@
             this.label86.Text = "SPD (Gear)";
             this.label86.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pb2_SpeedTuner
-            // 
-            this.pb2_SpeedTuner.Location = new System.Drawing.Point(61, 230);
-            this.pb2_SpeedTuner.Margin = new System.Windows.Forms.Padding(4);
-            this.pb2_SpeedTuner.Name = "pb2_SpeedTuner";
-            this.pb2_SpeedTuner.Size = new System.Drawing.Size(65, 62);
-            this.pb2_SpeedTuner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb2_SpeedTuner.TabIndex = 7;
-            this.pb2_SpeedTuner.TabStop = false;
-            // 
             // cb2_SpeedTuner
             // 
             this.cb2_SpeedTuner.FormattingEnabled = true;
@@ -5842,16 +5324,6 @@
             this.nud1_SpeedTunerImprint.TabIndex = 5;
             this.nud1_SpeedTunerImprint.ValueChanged += new System.EventHandler(this.Nud1_SpeedTunerImprint_ValueChanged);
             // 
-            // pb1_SpeedTuner
-            // 
-            this.pb1_SpeedTuner.Location = new System.Drawing.Point(61, 94);
-            this.pb1_SpeedTuner.Margin = new System.Windows.Forms.Padding(4);
-            this.pb1_SpeedTuner.Name = "pb1_SpeedTuner";
-            this.pb1_SpeedTuner.Size = new System.Drawing.Size(65, 62);
-            this.pb1_SpeedTuner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb1_SpeedTuner.TabIndex = 2;
-            this.pb1_SpeedTuner.TabStop = false;
-            // 
             // cb1_SpeedTuner
             // 
             this.cb1_SpeedTuner.FormattingEnabled = true;
@@ -5884,6 +5356,732 @@
             this.sfd_export.FileName = "E7 Gear Optimizer.json";
             this.sfd_export.Filter = "JSON|*.json";
             // 
+            // tabPage36
+            // 
+            this.tabPage36.Location = new System.Drawing.Point(4, 32);
+            this.tabPage36.Name = "tabPage36";
+            this.tabPage36.Size = new System.Drawing.Size(996, 0);
+            this.tabPage36.TabIndex = 14;
+            this.tabPage36.UseVisualStyleBackColor = true;
+            // 
+            // tabPage37
+            // 
+            this.tabPage37.Location = new System.Drawing.Point(4, 32);
+            this.tabPage37.Name = "tabPage37";
+            this.tabPage37.Size = new System.Drawing.Size(996, 0);
+            this.tabPage37.TabIndex = 15;
+            this.tabPage37.UseVisualStyleBackColor = true;
+            // 
+            // tabPage38
+            // 
+            this.tabPage38.Location = new System.Drawing.Point(4, 32);
+            this.tabPage38.Name = "tabPage38";
+            this.tabPage38.Size = new System.Drawing.Size(996, 0);
+            this.tabPage38.TabIndex = 16;
+            this.tabPage38.UseVisualStyleBackColor = true;
+            // 
+            // b_NewItemEquipped
+            // 
+            this.b_NewItemEquipped.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.newEquipped;
+            this.b_NewItemEquipped.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.b_NewItemEquipped.Location = new System.Drawing.Point(1693, 602);
+            this.b_NewItemEquipped.Margin = new System.Windows.Forms.Padding(4);
+            this.b_NewItemEquipped.Name = "b_NewItemEquipped";
+            this.b_NewItemEquipped.Size = new System.Drawing.Size(69, 48);
+            this.b_NewItemEquipped.TabIndex = 31;
+            this.b_NewItemEquipped.UseVisualStyleBackColor = true;
+            this.b_NewItemEquipped.Click += new System.EventHandler(this.B_NewItemEquipped_Click);
+            // 
+            // pb_ItemLocked
+            // 
+            this.pb_ItemLocked.Location = new System.Drawing.Point(1427, 558);
+            this.pb_ItemLocked.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_ItemLocked.Name = "pb_ItemLocked";
+            this.pb_ItemLocked.Size = new System.Drawing.Size(68, 62);
+            this.pb_ItemLocked.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_ItemLocked.TabIndex = 30;
+            this.pb_ItemLocked.TabStop = false;
+            this.pb_ItemLocked.Click += new System.EventHandler(this.Pb_ItemLocked_Click);
+            // 
+            // b_RemoveItem
+            // 
+            this.b_RemoveItem.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.remove;
+            this.b_RemoveItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.b_RemoveItem.Location = new System.Drawing.Point(1539, 546);
+            this.b_RemoveItem.Margin = new System.Windows.Forms.Padding(4);
+            this.b_RemoveItem.Name = "b_RemoveItem";
+            this.b_RemoveItem.Size = new System.Drawing.Size(69, 48);
+            this.b_RemoveItem.TabIndex = 29;
+            this.b_RemoveItem.UseVisualStyleBackColor = true;
+            this.b_RemoveItem.Click += new System.EventHandler(this.B_RemoveItem_Click);
+            // 
+            // pb_Equipped
+            // 
+            this.pb_Equipped.Location = new System.Drawing.Point(1244, 668);
+            this.pb_Equipped.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_Equipped.Name = "pb_Equipped";
+            this.pb_Equipped.Size = new System.Drawing.Size(125, 116);
+            this.pb_Equipped.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_Equipped.TabIndex = 28;
+            this.pb_Equipped.TabStop = false;
+            // 
+            // rb_BootsType
+            // 
+            this.rb_BootsType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_BootsType.Image = global::E7_Gear_Optimizer.Properties.Resources.boots;
+            this.rb_BootsType.Location = new System.Drawing.Point(99, 153);
+            this.rb_BootsType.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_BootsType.Name = "rb_BootsType";
+            this.rb_BootsType.Size = new System.Drawing.Size(69, 52);
+            this.rb_BootsType.TabIndex = 13;
+            this.rb_BootsType.UseVisualStyleBackColor = true;
+            this.rb_BootsType.CheckedChanged += new System.EventHandler(this.Rb_BootsType_CheckedChanged);
+            // 
+            // rb_RingType
+            // 
+            this.rb_RingType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_RingType.Image = global::E7_Gear_Optimizer.Properties.Resources.ring;
+            this.rb_RingType.Location = new System.Drawing.Point(99, 94);
+            this.rb_RingType.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_RingType.Name = "rb_RingType";
+            this.rb_RingType.Size = new System.Drawing.Size(77, 52);
+            this.rb_RingType.TabIndex = 12;
+            this.rb_RingType.Text = "           ";
+            this.rb_RingType.UseVisualStyleBackColor = true;
+            this.rb_RingType.CheckedChanged += new System.EventHandler(this.Rb_RingType_CheckedChanged);
+            // 
+            // rb_NecklaceType
+            // 
+            this.rb_NecklaceType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_NecklaceType.Image = global::E7_Gear_Optimizer.Properties.Resources.necklace;
+            this.rb_NecklaceType.Location = new System.Drawing.Point(99, 33);
+            this.rb_NecklaceType.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_NecklaceType.Name = "rb_NecklaceType";
+            this.rb_NecklaceType.Size = new System.Drawing.Size(77, 52);
+            this.rb_NecklaceType.TabIndex = 11;
+            this.rb_NecklaceType.Text = "           ";
+            this.rb_NecklaceType.UseVisualStyleBackColor = true;
+            this.rb_NecklaceType.CheckedChanged += new System.EventHandler(this.Rb_NecklaceType_CheckedChanged);
+            // 
+            // rb_ArmorType
+            // 
+            this.rb_ArmorType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_ArmorType.Image = global::E7_Gear_Optimizer.Properties.Resources.armor;
+            this.rb_ArmorType.Location = new System.Drawing.Point(13, 153);
+            this.rb_ArmorType.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_ArmorType.Name = "rb_ArmorType";
+            this.rb_ArmorType.Size = new System.Drawing.Size(77, 52);
+            this.rb_ArmorType.TabIndex = 10;
+            this.rb_ArmorType.Text = "           ";
+            this.rb_ArmorType.UseVisualStyleBackColor = true;
+            this.rb_ArmorType.CheckedChanged += new System.EventHandler(this.Rb_ArmorType_CheckedChanged);
+            // 
+            // rb_HelmetType
+            // 
+            this.rb_HelmetType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_HelmetType.Image = global::E7_Gear_Optimizer.Properties.Resources.helmet;
+            this.rb_HelmetType.Location = new System.Drawing.Point(13, 94);
+            this.rb_HelmetType.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_HelmetType.Name = "rb_HelmetType";
+            this.rb_HelmetType.Size = new System.Drawing.Size(77, 52);
+            this.rb_HelmetType.TabIndex = 9;
+            this.rb_HelmetType.Text = "           ";
+            this.rb_HelmetType.UseVisualStyleBackColor = true;
+            this.rb_HelmetType.CheckedChanged += new System.EventHandler(this.Rb_HelmetType_CheckedChanged);
+            // 
+            // rb_WeaponType
+            // 
+            this.rb_WeaponType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_WeaponType.Checked = true;
+            this.rb_WeaponType.Image = ((System.Drawing.Image)(resources.GetObject("rb_WeaponType.Image")));
+            this.rb_WeaponType.Location = new System.Drawing.Point(13, 33);
+            this.rb_WeaponType.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_WeaponType.Name = "rb_WeaponType";
+            this.rb_WeaponType.Size = new System.Drawing.Size(77, 52);
+            this.rb_WeaponType.TabIndex = 8;
+            this.rb_WeaponType.TabStop = true;
+            this.rb_WeaponType.Text = "            ";
+            this.rb_WeaponType.UseVisualStyleBackColor = true;
+            this.rb_WeaponType.CheckedChanged += new System.EventHandler(this.Rb_WeaponType_CheckedChanged);
+            // 
+            // rb_PenetrationSet
+            // 
+            this.rb_PenetrationSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_PenetrationSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_penetration;
+            this.rb_PenetrationSet.Location = new System.Drawing.Point(256, 205);
+            this.rb_PenetrationSet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_PenetrationSet.Name = "rb_PenetrationSet";
+            this.rb_PenetrationSet.Size = new System.Drawing.Size(77, 52);
+            this.rb_PenetrationSet.TabIndex = 21;
+            this.rb_PenetrationSet.Text = "           ";
+            this.rb_PenetrationSet.UseVisualStyleBackColor = true;
+            // 
+            // rb_InjurySet
+            // 
+            this.rb_InjurySet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_InjurySet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_injury;
+            this.rb_InjurySet.Location = new System.Drawing.Point(171, 205);
+            this.rb_InjurySet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_InjurySet.Name = "rb_InjurySet";
+            this.rb_InjurySet.Size = new System.Drawing.Size(77, 52);
+            this.rb_InjurySet.TabIndex = 20;
+            this.rb_InjurySet.Text = "           ";
+            this.rb_InjurySet.UseVisualStyleBackColor = true;
+            // 
+            // rb_RevengeSet
+            // 
+            this.rb_RevengeSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_RevengeSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_revenge;
+            this.rb_RevengeSet.Location = new System.Drawing.Point(85, 205);
+            this.rb_RevengeSet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_RevengeSet.Name = "rb_RevengeSet";
+            this.rb_RevengeSet.Size = new System.Drawing.Size(77, 52);
+            this.rb_RevengeSet.TabIndex = 19;
+            this.rb_RevengeSet.Text = "           ";
+            this.rb_RevengeSet.UseVisualStyleBackColor = true;
+            // 
+            // rb_UnitySet
+            // 
+            this.rb_UnitySet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_UnitySet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_unity;
+            this.rb_UnitySet.Location = new System.Drawing.Point(171, 146);
+            this.rb_UnitySet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_UnitySet.Name = "rb_UnitySet";
+            this.rb_UnitySet.Size = new System.Drawing.Size(77, 52);
+            this.rb_UnitySet.TabIndex = 18;
+            this.rb_UnitySet.Text = "           ";
+            this.rb_UnitySet.UseVisualStyleBackColor = true;
+            // 
+            // rb_ImmunitySet
+            // 
+            this.rb_ImmunitySet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_ImmunitySet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_immunity;
+            this.rb_ImmunitySet.Location = new System.Drawing.Point(256, 146);
+            this.rb_ImmunitySet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_ImmunitySet.Name = "rb_ImmunitySet";
+            this.rb_ImmunitySet.Size = new System.Drawing.Size(77, 52);
+            this.rb_ImmunitySet.TabIndex = 17;
+            this.rb_ImmunitySet.Text = "           ";
+            this.rb_ImmunitySet.UseVisualStyleBackColor = true;
+            // 
+            // rb_RageSet
+            // 
+            this.rb_RageSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_RageSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_rage;
+            this.rb_RageSet.Location = new System.Drawing.Point(85, 146);
+            this.rb_RageSet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_RageSet.Name = "rb_RageSet";
+            this.rb_RageSet.Size = new System.Drawing.Size(77, 52);
+            this.rb_RageSet.TabIndex = 16;
+            this.rb_RageSet.Text = "           ";
+            this.rb_RageSet.UseVisualStyleBackColor = true;
+            // 
+            // rb_ResistSet
+            // 
+            this.rb_ResistSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_ResistSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_resist;
+            this.rb_ResistSet.Location = new System.Drawing.Point(5, 146);
+            this.rb_ResistSet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_ResistSet.Name = "rb_ResistSet";
+            this.rb_ResistSet.Size = new System.Drawing.Size(77, 52);
+            this.rb_ResistSet.TabIndex = 15;
+            this.rb_ResistSet.Text = "           ";
+            this.rb_ResistSet.UseVisualStyleBackColor = true;
+            // 
+            // rb_DestructionSet
+            // 
+            this.rb_DestructionSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_DestructionSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_destruction;
+            this.rb_DestructionSet.Location = new System.Drawing.Point(5, 205);
+            this.rb_DestructionSet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_DestructionSet.Name = "rb_DestructionSet";
+            this.rb_DestructionSet.Size = new System.Drawing.Size(77, 52);
+            this.rb_DestructionSet.TabIndex = 14;
+            this.rb_DestructionSet.Text = "           ";
+            this.rb_DestructionSet.UseVisualStyleBackColor = true;
+            // 
+            // rb_LifestealSet
+            // 
+            this.rb_LifestealSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_LifestealSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_lifesteal;
+            this.rb_LifestealSet.Location = new System.Drawing.Point(256, 87);
+            this.rb_LifestealSet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_LifestealSet.Name = "rb_LifestealSet";
+            this.rb_LifestealSet.Size = new System.Drawing.Size(77, 52);
+            this.rb_LifestealSet.TabIndex = 13;
+            this.rb_LifestealSet.Text = "           ";
+            this.rb_LifestealSet.UseVisualStyleBackColor = true;
+            // 
+            // rb_CounterSet
+            // 
+            this.rb_CounterSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_CounterSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_counter;
+            this.rb_CounterSet.Location = new System.Drawing.Point(171, 87);
+            this.rb_CounterSet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_CounterSet.Name = "rb_CounterSet";
+            this.rb_CounterSet.Size = new System.Drawing.Size(77, 52);
+            this.rb_CounterSet.TabIndex = 12;
+            this.rb_CounterSet.Text = "           ";
+            this.rb_CounterSet.UseVisualStyleBackColor = true;
+            // 
+            // rb_AttackSet
+            // 
+            this.rb_AttackSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_AttackSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_attack;
+            this.rb_AttackSet.Location = new System.Drawing.Point(85, 87);
+            this.rb_AttackSet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_AttackSet.Name = "rb_AttackSet";
+            this.rb_AttackSet.Size = new System.Drawing.Size(77, 52);
+            this.rb_AttackSet.TabIndex = 11;
+            this.rb_AttackSet.Text = "           ";
+            this.rb_AttackSet.UseVisualStyleBackColor = true;
+            // 
+            // rb_HealthSet
+            // 
+            this.rb_HealthSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_HealthSet.Cursor = System.Windows.Forms.Cursors.Default;
+            this.rb_HealthSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_health;
+            this.rb_HealthSet.Location = new System.Drawing.Point(5, 87);
+            this.rb_HealthSet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_HealthSet.Name = "rb_HealthSet";
+            this.rb_HealthSet.Size = new System.Drawing.Size(77, 52);
+            this.rb_HealthSet.TabIndex = 10;
+            this.rb_HealthSet.Text = "           ";
+            this.rb_HealthSet.UseVisualStyleBackColor = true;
+            // 
+            // rb_DefSet
+            // 
+            this.rb_DefSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_DefSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_defense;
+            this.rb_DefSet.Location = new System.Drawing.Point(256, 33);
+            this.rb_DefSet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_DefSet.Name = "rb_DefSet";
+            this.rb_DefSet.Size = new System.Drawing.Size(77, 52);
+            this.rb_DefSet.TabIndex = 9;
+            this.rb_DefSet.Text = "           ";
+            this.rb_DefSet.UseVisualStyleBackColor = true;
+            // 
+            // rb_CritSet
+            // 
+            this.rb_CritSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_CritSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_crit;
+            this.rb_CritSet.Location = new System.Drawing.Point(171, 33);
+            this.rb_CritSet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_CritSet.Name = "rb_CritSet";
+            this.rb_CritSet.Size = new System.Drawing.Size(77, 52);
+            this.rb_CritSet.TabIndex = 8;
+            this.rb_CritSet.Text = "           ";
+            this.rb_CritSet.UseVisualStyleBackColor = true;
+            // 
+            // rb_HitSet
+            // 
+            this.rb_HitSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_HitSet.Image = ((System.Drawing.Image)(resources.GetObject("rb_HitSet.Image")));
+            this.rb_HitSet.Location = new System.Drawing.Point(85, 33);
+            this.rb_HitSet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_HitSet.Name = "rb_HitSet";
+            this.rb_HitSet.Size = new System.Drawing.Size(77, 52);
+            this.rb_HitSet.TabIndex = 7;
+            this.rb_HitSet.Text = "           ";
+            this.rb_HitSet.UseVisualStyleBackColor = true;
+            // 
+            // rb_SpeedSet
+            // 
+            this.rb_SpeedSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rb_SpeedSet.Checked = true;
+            this.rb_SpeedSet.Image = global::E7_Gear_Optimizer.Properties.Resources.set_speed;
+            this.rb_SpeedSet.Location = new System.Drawing.Point(5, 33);
+            this.rb_SpeedSet.Margin = new System.Windows.Forms.Padding(4);
+            this.rb_SpeedSet.Name = "rb_SpeedSet";
+            this.rb_SpeedSet.Size = new System.Drawing.Size(81, 53);
+            this.rb_SpeedSet.TabIndex = 6;
+            this.rb_SpeedSet.TabStop = true;
+            this.rb_SpeedSet.Text = "            ";
+            this.rb_SpeedSet.UseVisualStyleBackColor = true;
+            // 
+            // b_EditItem
+            // 
+            this.b_EditItem.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
+            this.b_EditItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.b_EditItem.Location = new System.Drawing.Point(1616, 546);
+            this.b_EditItem.Margin = new System.Windows.Forms.Padding(4);
+            this.b_EditItem.Name = "b_EditItem";
+            this.b_EditItem.Size = new System.Drawing.Size(69, 48);
+            this.b_EditItem.TabIndex = 3;
+            this.b_EditItem.UseVisualStyleBackColor = true;
+            this.b_EditItem.Click += new System.EventHandler(this.B_EditItem_Click);
+            // 
+            // b_NewItem
+            // 
+            this.b_NewItem.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources._new;
+            this.b_NewItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.b_NewItem.Location = new System.Drawing.Point(1693, 546);
+            this.b_NewItem.Margin = new System.Windows.Forms.Padding(4);
+            this.b_NewItem.Name = "b_NewItem";
+            this.b_NewItem.Size = new System.Drawing.Size(69, 48);
+            this.b_NewItem.TabIndex = 2;
+            this.b_NewItem.UseVisualStyleBackColor = true;
+            this.b_NewItem.Click += new System.EventHandler(this.B_NewItem_Click);
+            // 
+            // b_EditBoots
+            // 
+            this.b_EditBoots.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
+            this.b_EditBoots.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.b_EditBoots.Location = new System.Drawing.Point(1598, 815);
+            this.b_EditBoots.Margin = new System.Windows.Forms.Padding(4);
+            this.b_EditBoots.Name = "b_EditBoots";
+            this.b_EditBoots.Size = new System.Drawing.Size(55, 36);
+            this.b_EditBoots.TabIndex = 96;
+            this.b_EditBoots.UseVisualStyleBackColor = true;
+            this.b_EditBoots.Click += new System.EventHandler(this.B_EditBoots_Click);
+            // 
+            // b_EditRing
+            // 
+            this.b_EditRing.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
+            this.b_EditRing.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.b_EditRing.Location = new System.Drawing.Point(1338, 815);
+            this.b_EditRing.Margin = new System.Windows.Forms.Padding(4);
+            this.b_EditRing.Name = "b_EditRing";
+            this.b_EditRing.Size = new System.Drawing.Size(55, 36);
+            this.b_EditRing.TabIndex = 94;
+            this.b_EditRing.UseVisualStyleBackColor = true;
+            this.b_EditRing.Click += new System.EventHandler(this.B_EditRing_Click);
+            // 
+            // b_EditNecklace
+            // 
+            this.b_EditNecklace.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
+            this.b_EditNecklace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.b_EditNecklace.Location = new System.Drawing.Point(1078, 815);
+            this.b_EditNecklace.Margin = new System.Windows.Forms.Padding(4);
+            this.b_EditNecklace.Name = "b_EditNecklace";
+            this.b_EditNecklace.Size = new System.Drawing.Size(55, 36);
+            this.b_EditNecklace.TabIndex = 92;
+            this.b_EditNecklace.UseVisualStyleBackColor = true;
+            this.b_EditNecklace.Click += new System.EventHandler(this.B_EditNecklace_Click);
+            // 
+            // b_EditArmor
+            // 
+            this.b_EditArmor.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
+            this.b_EditArmor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.b_EditArmor.Location = new System.Drawing.Point(818, 815);
+            this.b_EditArmor.Margin = new System.Windows.Forms.Padding(4);
+            this.b_EditArmor.Name = "b_EditArmor";
+            this.b_EditArmor.Size = new System.Drawing.Size(55, 36);
+            this.b_EditArmor.TabIndex = 90;
+            this.b_EditArmor.UseVisualStyleBackColor = true;
+            this.b_EditArmor.Click += new System.EventHandler(this.B_EditArmor_Click);
+            // 
+            // b_EditHelmet
+            // 
+            this.b_EditHelmet.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
+            this.b_EditHelmet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.b_EditHelmet.Location = new System.Drawing.Point(558, 815);
+            this.b_EditHelmet.Margin = new System.Windows.Forms.Padding(4);
+            this.b_EditHelmet.Name = "b_EditHelmet";
+            this.b_EditHelmet.Size = new System.Drawing.Size(55, 36);
+            this.b_EditHelmet.TabIndex = 88;
+            this.b_EditHelmet.UseVisualStyleBackColor = true;
+            this.b_EditHelmet.Click += new System.EventHandler(this.B_EditHelmet_Click);
+            // 
+            // b_EditWeapon
+            // 
+            this.b_EditWeapon.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
+            this.b_EditWeapon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.b_EditWeapon.Location = new System.Drawing.Point(293, 815);
+            this.b_EditWeapon.Margin = new System.Windows.Forms.Padding(4);
+            this.b_EditWeapon.Name = "b_EditWeapon";
+            this.b_EditWeapon.Size = new System.Drawing.Size(55, 36);
+            this.b_EditWeapon.TabIndex = 86;
+            this.b_EditWeapon.UseVisualStyleBackColor = true;
+            this.b_EditWeapon.Click += new System.EventHandler(this.B_WeaponEdit_Click);
+            // 
+            // pb_Hero
+            // 
+            this.pb_Hero.Location = new System.Drawing.Point(9, 465);
+            this.pb_Hero.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_Hero.Name = "pb_Hero";
+            this.pb_Hero.Size = new System.Drawing.Size(101, 94);
+            this.pb_Hero.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_Hero.TabIndex = 76;
+            this.pb_Hero.TabStop = false;
+            // 
+            // b_RemoveHero
+            // 
+            this.b_RemoveHero.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.remove;
+            this.b_RemoveHero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.b_RemoveHero.Location = new System.Drawing.Point(1543, 462);
+            this.b_RemoveHero.Margin = new System.Windows.Forms.Padding(4);
+            this.b_RemoveHero.Name = "b_RemoveHero";
+            this.b_RemoveHero.Size = new System.Drawing.Size(69, 48);
+            this.b_RemoveHero.TabIndex = 32;
+            this.b_RemoveHero.UseVisualStyleBackColor = true;
+            this.b_RemoveHero.Click += new System.EventHandler(this.B_RemoveHero_Click);
+            // 
+            // b_EditHero
+            // 
+            this.b_EditHero.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources.Edit;
+            this.b_EditHero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.b_EditHero.Location = new System.Drawing.Point(1620, 462);
+            this.b_EditHero.Margin = new System.Windows.Forms.Padding(4);
+            this.b_EditHero.Name = "b_EditHero";
+            this.b_EditHero.Size = new System.Drawing.Size(69, 48);
+            this.b_EditHero.TabIndex = 31;
+            this.b_EditHero.UseVisualStyleBackColor = true;
+            this.b_EditHero.Click += new System.EventHandler(this.B_EditHero_Click);
+            // 
+            // b_AddHero
+            // 
+            this.b_AddHero.BackgroundImage = global::E7_Gear_Optimizer.Properties.Resources._new;
+            this.b_AddHero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.b_AddHero.Location = new System.Drawing.Point(1697, 462);
+            this.b_AddHero.Margin = new System.Windows.Forms.Padding(4);
+            this.b_AddHero.Name = "b_AddHero";
+            this.b_AddHero.Size = new System.Drawing.Size(69, 48);
+            this.b_AddHero.TabIndex = 30;
+            this.b_AddHero.UseVisualStyleBackColor = true;
+            this.b_AddHero.Click += new System.EventHandler(this.B_AddHero_Click);
+            // 
+            // pb_OptimizeHeroPortrait
+            // 
+            this.pb_OptimizeHeroPortrait.Location = new System.Drawing.Point(4, 3);
+            this.pb_OptimizeHeroPortrait.Name = "pb_OptimizeHeroPortrait";
+            this.pb_OptimizeHeroPortrait.Size = new System.Drawing.Size(90, 90);
+            this.pb_OptimizeHeroPortrait.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_OptimizeHeroPortrait.TabIndex = 153;
+            this.pb_OptimizeHeroPortrait.TabStop = false;
+            // 
+            // pb_OptimizeBootsEquipped
+            // 
+            this.pb_OptimizeBootsEquipped.Location = new System.Drawing.Point(1579, 641);
+            this.pb_OptimizeBootsEquipped.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_OptimizeBootsEquipped.Name = "pb_OptimizeBootsEquipped";
+            this.pb_OptimizeBootsEquipped.Size = new System.Drawing.Size(93, 86);
+            this.pb_OptimizeBootsEquipped.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_OptimizeBootsEquipped.TabIndex = 135;
+            this.pb_OptimizeBootsEquipped.TabStop = false;
+            // 
+            // pb_OptimizeRingEquipped
+            // 
+            this.pb_OptimizeRingEquipped.Location = new System.Drawing.Point(1579, 319);
+            this.pb_OptimizeRingEquipped.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_OptimizeRingEquipped.Name = "pb_OptimizeRingEquipped";
+            this.pb_OptimizeRingEquipped.Size = new System.Drawing.Size(93, 86);
+            this.pb_OptimizeRingEquipped.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_OptimizeRingEquipped.TabIndex = 134;
+            this.pb_OptimizeRingEquipped.TabStop = false;
+            // 
+            // pb_OptimizeNecklaceEquipped
+            // 
+            this.pb_OptimizeNecklaceEquipped.Location = new System.Drawing.Point(1579, 0);
+            this.pb_OptimizeNecklaceEquipped.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_OptimizeNecklaceEquipped.Name = "pb_OptimizeNecklaceEquipped";
+            this.pb_OptimizeNecklaceEquipped.Size = new System.Drawing.Size(93, 86);
+            this.pb_OptimizeNecklaceEquipped.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_OptimizeNecklaceEquipped.TabIndex = 133;
+            this.pb_OptimizeNecklaceEquipped.TabStop = false;
+            // 
+            // pb_OptimizeWeaponEquipped
+            // 
+            this.pb_OptimizeWeaponEquipped.Location = new System.Drawing.Point(1231, 0);
+            this.pb_OptimizeWeaponEquipped.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_OptimizeWeaponEquipped.Name = "pb_OptimizeWeaponEquipped";
+            this.pb_OptimizeWeaponEquipped.Size = new System.Drawing.Size(93, 86);
+            this.pb_OptimizeWeaponEquipped.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_OptimizeWeaponEquipped.TabIndex = 132;
+            this.pb_OptimizeWeaponEquipped.TabStop = false;
+            // 
+            // pb_OptimizeArmorEquipped
+            // 
+            this.pb_OptimizeArmorEquipped.Location = new System.Drawing.Point(1231, 641);
+            this.pb_OptimizeArmorEquipped.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_OptimizeArmorEquipped.Name = "pb_OptimizeArmorEquipped";
+            this.pb_OptimizeArmorEquipped.Size = new System.Drawing.Size(93, 86);
+            this.pb_OptimizeArmorEquipped.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_OptimizeArmorEquipped.TabIndex = 131;
+            this.pb_OptimizeArmorEquipped.TabStop = false;
+            // 
+            // pb_OptimizeHelmetEquipped
+            // 
+            this.pb_OptimizeHelmetEquipped.Location = new System.Drawing.Point(1231, 319);
+            this.pb_OptimizeHelmetEquipped.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_OptimizeHelmetEquipped.Name = "pb_OptimizeHelmetEquipped";
+            this.pb_OptimizeHelmetEquipped.Size = new System.Drawing.Size(93, 86);
+            this.pb_OptimizeHelmetEquipped.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_OptimizeHelmetEquipped.TabIndex = 130;
+            this.pb_OptimizeHelmetEquipped.TabStop = false;
+            // 
+            // pb4_SpeedTuner
+            // 
+            this.pb4_SpeedTuner.Location = new System.Drawing.Point(61, 507);
+            this.pb4_SpeedTuner.Margin = new System.Windows.Forms.Padding(4);
+            this.pb4_SpeedTuner.Name = "pb4_SpeedTuner";
+            this.pb4_SpeedTuner.Size = new System.Drawing.Size(65, 62);
+            this.pb4_SpeedTuner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb4_SpeedTuner.TabIndex = 17;
+            this.pb4_SpeedTuner.TabStop = false;
+            // 
+            // pb3_SpeedTuner
+            // 
+            this.pb3_SpeedTuner.Location = new System.Drawing.Point(61, 368);
+            this.pb3_SpeedTuner.Margin = new System.Windows.Forms.Padding(4);
+            this.pb3_SpeedTuner.Name = "pb3_SpeedTuner";
+            this.pb3_SpeedTuner.Size = new System.Drawing.Size(65, 62);
+            this.pb3_SpeedTuner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb3_SpeedTuner.TabIndex = 12;
+            this.pb3_SpeedTuner.TabStop = false;
+            // 
+            // pb2_SpeedTuner
+            // 
+            this.pb2_SpeedTuner.Location = new System.Drawing.Point(61, 230);
+            this.pb2_SpeedTuner.Margin = new System.Windows.Forms.Padding(4);
+            this.pb2_SpeedTuner.Name = "pb2_SpeedTuner";
+            this.pb2_SpeedTuner.Size = new System.Drawing.Size(65, 62);
+            this.pb2_SpeedTuner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb2_SpeedTuner.TabIndex = 7;
+            this.pb2_SpeedTuner.TabStop = false;
+            // 
+            // pb1_SpeedTuner
+            // 
+            this.pb1_SpeedTuner.Location = new System.Drawing.Point(61, 94);
+            this.pb1_SpeedTuner.Margin = new System.Windows.Forms.Padding(4);
+            this.pb1_SpeedTuner.Name = "pb1_SpeedTuner";
+            this.pb1_SpeedTuner.Size = new System.Drawing.Size(65, 62);
+            this.pb1_SpeedTuner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb1_SpeedTuner.TabIndex = 2;
+            this.pb1_SpeedTuner.TabStop = false;
+            // 
+            // is_Weapon
+            // 
+            this.is_Weapon.Hero = null;
+            this.is_Weapon.Image = null;
+            this.is_Weapon.Item = null;
+            this.is_Weapon.Location = new System.Drawing.Point(107, 555);
+            this.is_Weapon.Margin = new System.Windows.Forms.Padding(5);
+            this.is_Weapon.Name = "is_Weapon";
+            this.is_Weapon.Size = new System.Drawing.Size(241, 258);
+            this.is_Weapon.TabIndex = 118;
+            // 
+            // is_Helmet
+            // 
+            this.is_Helmet.Hero = null;
+            this.is_Helmet.Image = null;
+            this.is_Helmet.Item = null;
+            this.is_Helmet.Location = new System.Drawing.Point(372, 555);
+            this.is_Helmet.Margin = new System.Windows.Forms.Padding(5);
+            this.is_Helmet.Name = "is_Helmet";
+            this.is_Helmet.Size = new System.Drawing.Size(241, 258);
+            this.is_Helmet.TabIndex = 117;
+            // 
+            // is_Armor
+            // 
+            this.is_Armor.Hero = null;
+            this.is_Armor.Image = null;
+            this.is_Armor.Item = null;
+            this.is_Armor.Location = new System.Drawing.Point(632, 555);
+            this.is_Armor.Margin = new System.Windows.Forms.Padding(5);
+            this.is_Armor.Name = "is_Armor";
+            this.is_Armor.Size = new System.Drawing.Size(241, 258);
+            this.is_Armor.TabIndex = 116;
+            // 
+            // is_Necklace
+            // 
+            this.is_Necklace.Hero = null;
+            this.is_Necklace.Image = null;
+            this.is_Necklace.Item = null;
+            this.is_Necklace.Location = new System.Drawing.Point(892, 555);
+            this.is_Necklace.Margin = new System.Windows.Forms.Padding(5);
+            this.is_Necklace.Name = "is_Necklace";
+            this.is_Necklace.Size = new System.Drawing.Size(241, 258);
+            this.is_Necklace.TabIndex = 115;
+            // 
+            // is_Ring
+            // 
+            this.is_Ring.Hero = null;
+            this.is_Ring.Image = null;
+            this.is_Ring.Item = null;
+            this.is_Ring.Location = new System.Drawing.Point(1152, 555);
+            this.is_Ring.Margin = new System.Windows.Forms.Padding(5);
+            this.is_Ring.Name = "is_Ring";
+            this.is_Ring.Size = new System.Drawing.Size(241, 258);
+            this.is_Ring.TabIndex = 114;
+            // 
+            // is_Boots
+            // 
+            this.is_Boots.Hero = null;
+            this.is_Boots.Image = null;
+            this.is_Boots.Item = null;
+            this.is_Boots.Location = new System.Drawing.Point(1412, 555);
+            this.is_Boots.Margin = new System.Windows.Forms.Padding(5);
+            this.is_Boots.Name = "is_Boots";
+            this.is_Boots.Size = new System.Drawing.Size(241, 258);
+            this.is_Boots.TabIndex = 113;
+            // 
+            // is_NecklaceOptimize
+            // 
+            this.is_NecklaceOptimize.Hero = null;
+            this.is_NecklaceOptimize.Image = null;
+            this.is_NecklaceOptimize.Item = null;
+            this.is_NecklaceOptimize.Location = new System.Drawing.Point(1677, 1);
+            this.is_NecklaceOptimize.Margin = new System.Windows.Forms.Padding(5);
+            this.is_NecklaceOptimize.Name = "is_NecklaceOptimize";
+            this.is_NecklaceOptimize.Size = new System.Drawing.Size(241, 258);
+            this.is_NecklaceOptimize.TabIndex = 146;
+            // 
+            // is_BootsOptimize
+            // 
+            this.is_BootsOptimize.Hero = null;
+            this.is_BootsOptimize.Image = null;
+            this.is_BootsOptimize.Item = null;
+            this.is_BootsOptimize.Location = new System.Drawing.Point(1677, 641);
+            this.is_BootsOptimize.Margin = new System.Windows.Forms.Padding(5);
+            this.is_BootsOptimize.Name = "is_BootsOptimize";
+            this.is_BootsOptimize.Size = new System.Drawing.Size(241, 258);
+            this.is_BootsOptimize.TabIndex = 117;
+            // 
+            // is_RingOptimize
+            // 
+            this.is_RingOptimize.Hero = null;
+            this.is_RingOptimize.Image = null;
+            this.is_RingOptimize.Item = null;
+            this.is_RingOptimize.Location = new System.Drawing.Point(1677, 318);
+            this.is_RingOptimize.Margin = new System.Windows.Forms.Padding(5);
+            this.is_RingOptimize.Name = "is_RingOptimize";
+            this.is_RingOptimize.Size = new System.Drawing.Size(241, 258);
+            this.is_RingOptimize.TabIndex = 145;
+            // 
+            // is_ArmorOptimize
+            // 
+            this.is_ArmorOptimize.Hero = null;
+            this.is_ArmorOptimize.Image = null;
+            this.is_ArmorOptimize.Item = null;
+            this.is_ArmorOptimize.Location = new System.Drawing.Point(1329, 641);
+            this.is_ArmorOptimize.Margin = new System.Windows.Forms.Padding(5);
+            this.is_ArmorOptimize.Name = "is_ArmorOptimize";
+            this.is_ArmorOptimize.Size = new System.Drawing.Size(241, 258);
+            this.is_ArmorOptimize.TabIndex = 144;
+            // 
+            // is_HelmetOptimize
+            // 
+            this.is_HelmetOptimize.Hero = null;
+            this.is_HelmetOptimize.Image = null;
+            this.is_HelmetOptimize.Item = null;
+            this.is_HelmetOptimize.Location = new System.Drawing.Point(1329, 319);
+            this.is_HelmetOptimize.Margin = new System.Windows.Forms.Padding(5);
+            this.is_HelmetOptimize.Name = "is_HelmetOptimize";
+            this.is_HelmetOptimize.Size = new System.Drawing.Size(241, 258);
+            this.is_HelmetOptimize.TabIndex = 143;
+            // 
+            // is_WeaponOptimize
+            // 
+            this.is_WeaponOptimize.Hero = null;
+            this.is_WeaponOptimize.Image = null;
+            this.is_WeaponOptimize.Item = null;
+            this.is_WeaponOptimize.Location = new System.Drawing.Point(1329, 1);
+            this.is_WeaponOptimize.Margin = new System.Windows.Forms.Padding(5);
+            this.is_WeaponOptimize.Name = "is_WeaponOptimize";
+            this.is_WeaponOptimize.Size = new System.Drawing.Size(241, 258);
+            this.is_WeaponOptimize.TabIndex = 142;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -5891,7 +6089,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1924, 975);
+            this.ClientSize = new System.Drawing.Size(1924, 1038);
             this.Controls.Add(this.tc_Main);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -5904,8 +6102,6 @@
             this.tb_Inventory.ResumeLayout(false);
             this.tb_Inventory.PerformLayout();
             this.tc_InventorySets.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_ItemLocked)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Equipped)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Sub4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Sub3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Sub2)).EndInit();
@@ -5935,21 +6131,18 @@
             this.tc_Heroes_Class.ResumeLayout(false);
             this.tc_Heroes_Element.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Heroes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Hero)).EndInit();
             this.tb_Optimize.ResumeLayout(false);
             this.tb_Optimize.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeHeroPortrait)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_EnemyDef)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_LimitResults)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_EnhanceFocus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeBootsEquipped)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeRingEquipped)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeNecklaceEquipped)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeWeaponEquipped)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeArmorEquipped)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeHelmetEquipped)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_CritBonus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_OptimizeResults)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -5963,24 +6156,34 @@
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud4_SpeedTunerImprint)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb4_SpeedTuner)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud3_SpeedTunerImprint)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3_SpeedTuner)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud2_SpeedTunerImprint)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2_SpeedTuner)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud1_SpeedTunerImprint)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ItemLocked)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Equipped)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Hero)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeHeroPortrait)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeBootsEquipped)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeRingEquipped)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeNecklaceEquipped)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeWeaponEquipped)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeArmorEquipped)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_OptimizeHelmetEquipped)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4_SpeedTuner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3_SpeedTuner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2_SpeedTuner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1_SpeedTuner)).EndInit();
             this.ResumeLayout(false);
 
@@ -6425,6 +6628,22 @@
         private System.Windows.Forms.Button b_UnequipBoot;
         private System.Windows.Forms.Button b_UnequipRing;
         private System.Windows.Forms.Button b_UnequipNecklace;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.TabPage tabPage36;
+        private System.Windows.Forms.TabPage tabPage37;
+        private System.Windows.Forms.TabPage tabPage38;
+        private System.Windows.Forms.RadioButton rb_PenetrationSet;
+        private System.Windows.Forms.RadioButton rb_InjurySet;
+        private System.Windows.Forms.RadioButton rb_RevengeSet;
     }
 }
 
